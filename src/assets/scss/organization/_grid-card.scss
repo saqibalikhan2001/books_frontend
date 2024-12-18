@@ -1,0 +1,151 @@
+.organization_card {
+  
+  &:not(.default_organization)
+  {
+    border: 1px solid #e5e5e5;
+  }
+  .ant-card-body {
+    padding: 20px 10px 20px 21px
+  }
+
+  &.default_organization {
+    background-color: var(--F2F7FE);
+    border-color: var(--388EFF);
+    .ant-card-body{
+      border: unset;
+    } 
+  }
+}
+
+.organization-card-widget {
+  .organization-img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    @extend .d-flex-all;
+    .ant-image{
+      width: 100%;
+      height: 100%;
+      img {
+        @extend .wh-100;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
+  .set_default {
+    color: var(--color-0061DD);
+    @include borderRadius(13px);
+    font-size: var(--font-size-b4);
+    line-height: var(--line-height-17);
+    font-weight: var(--p-medium);
+    background-color: var(--E5EFFC);
+    border: none;
+    padding: 3px 10px;
+
+  }
+
+  .organization-level {
+    font-size: var(--font-size-b2);
+    font-weight: var(--p-bold);
+    line-height: var(--line-height-22);
+    color: var(--color-1616);
+    margin: 0 0 5px 0;
+
+  }
+
+  .organization-details-list {
+    &:not(:last-child) {
+      margin-bottom: 6px;
+    }
+
+    .ant-col-3 {
+      max-width: 104px;
+      min-width: 104px;
+    }
+
+    .organization-key {
+      font-size: var(--font-size-b5);
+      font-weight: var(--p-semi-bold);
+      line-height: var(--line-height-17);
+      color: var(--color-1616);
+    }
+
+    .organization-value {
+      font-size: var(--font-size-b3);
+      line-height: var(--line-height-17);
+      padding-left: 10px;
+      color: var(--color-1616);
+
+    }
+  }
+
+  .no-border-btn {
+    color: var(--color-007AFF);
+
+    &:hover span {
+      text-decoration: underline;
+    }
+    &.link-btn{
+      background-color: transparent;
+    }
+  }
+  .btn-primary,
+  .btn-default{
+    padding: 0 12px;
+  }
+}
+
+$text_black: #161616;
+.organization_img {
+  width: auto;
+  height: 100px;
+  @extend .d-flex-all;
+  @include borderRadius(5px);
+  border: 1px solid var(--color-E5E5E5);
+  img {
+   @extend .wh-100;
+    object-fit: contain;
+  }
+  .ant-image-placeholder {
+    position: relative;
+    top: -7px;
+  }
+
+  .ant-image-mask {
+    border-radius: unset;
+  }
+}
+
+/*============================
+    Modal Styling
+=============================*/
+.default_modal {
+  .ant-modal-content {
+    height: 154px;
+    @extend .d-flex-all;
+
+    .ant-typography {
+      @extend .mb-20;
+      @extend .block;
+      color: $text_black;
+    }
+  }
+
+  .switch_btn {
+    width: 82px;
+  }
+
+  .view_btn {
+    width: 78px;
+  }
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}

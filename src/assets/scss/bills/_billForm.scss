@@ -1,0 +1,142 @@
+.bill_form {
+    .form_group {
+        label {
+            line-height: var(--line-height-18);
+            color: var(--color-1616);
+        }
+    }
+    .bill_box {
+        .final_payment {
+            max-width: 100%;
+            min-width: 385px;
+            width: auto;
+            margin-right: 10px;
+            .ant-typography{
+                text-align: right;
+            }
+            .estimate_discount_field {
+                .shipping_inputbox {
+                    .ant-form-item-control {
+                        max-width: 90px;
+                        .discount_field{
+                            padding-left: 12px;
+                        }
+                    }
+                }
+                .ant-form-item{
+                        margin-bottom: 0;
+                }
+            }
+            .bill_rounding {
+                .ant-form-item-label{
+                    text-align: right;
+                }
+                .ant-input-affix-wrapper{
+                    &.ant-input-affix-wrapper-focused{
+                        box-shadow: none;
+                        border: 1px solid #0061dd;
+                        &:hover{
+                            background-color: #fff;
+                        }
+                    }
+                    .ant-input,.ant-input-prefix{
+                        font-size: 14px !important;
+                    }
+                }
+            }
+          .bill_total_amount {
+                .ant-statistic-content{
+                    text-align: right;
+                    min-width: 150px;
+                    padding-left: 10px;
+                    margin-top: 10px;
+                    font-weight: bold;
+                    border-top: 1px solid #e5e5e5;
+                    border-bottom: 2px solid #e5e5e5;
+                    padding-bottom: 0;
+                }
+
+            }
+        }
+    }
+}
+.pending_bill_modal{
+    ._container{
+        padding-top: 5px;
+          .generic-table {
+            margin-top: 5px;
+            .pending_bill_status{
+                text-align: center;
+            }
+        }
+      }
+}
+.tax_discount{
+    color: #6e6e66;
+}
+
+.bill-table{
+    .final_payment{
+        max-width: 100%;
+        min-width: 300px;
+        width: auto;
+        .bill_discount_field{
+            min-width: 525px;
+            .estimate_discount_field {
+                max-width: 273px;
+                min-width: auto !important;
+            }
+            .ant-statistic{
+                min-width: auto !important;
+            }
+        }
+        .subtotal{
+            .ant-typography{
+                min-width: 262px;
+            }
+            .ant-statistic{
+                min-width: auto !important;
+            }
+        }
+        .tax-container{
+            .ant-typography{
+                min-width: 262px;
+            }
+        }
+        .adjustment_value{
+            .ant-typography{
+                min-width: 296px;
+            }
+        }
+        .bill-total{
+            .ant-typography{
+                min-width: 262px;
+            }
+        }
+    }
+}
+
+// ................................
+.modal_bill--detail{
+    .final_payment{
+        .shipping_inputbox{
+            .ant-form-item-row{
+                .ant-input-affix-wrapper{
+                    &.ant-input-affix-wrapper-focused{
+                        box-shadow: none;
+                        border-color: #0061dd;
+                        &:hover{
+                            background: transparent;
+                        }
+                    }
+                }
+            } 
+        }
+        .bill_paid_form.ant-typography{
+                margin-bottom: 20px !important;
+            }
+    }
+    .opening-balance .ant-statistic-content{
+        display: flex;
+    }
+}

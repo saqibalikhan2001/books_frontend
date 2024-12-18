@@ -1,0 +1,369 @@
+.__journal--details .generic-table .ant-table-thead .ant-table-cell:nth-child(4) > div {
+  text-align: right;
+  justify-content: flex-end;
+}
+._bill_payment_detial_page, 
+._bills_detial_page {
+  .truncate-2 {
+    word-break: break-all;
+    white-space: normal;
+  }
+}
+.create-payment--popup{
+
+  .flex-column.text-right.bill_amount_paid {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+
+
+.discount--err {
+  color: red;
+  font-size: 11px;
+  line-height: 12px;
+}
+.estimate_product_listing .discount_dropdown .ant-select-selector {
+  width: 44px;
+}
+
+.description--main,
+.refrence--main {
+  display: flex;
+  align-items: center;
+  span{
+    &:nth-child(2) {
+      flex: 1;
+      word-break: break-all;
+    }
+  }
+}
+.description--main{
+  flex-direction: column;
+  align-items: initial;
+}
+.refrence--main {
+  align-items: flex-start;
+}
+._bill_details_header {
+  .ant-page-header-heading {
+    background-color: #ebf3ff;
+  }
+  .ant-page-header-footer {
+    ._bills_detial_page,
+    ._bill_payment_detial_page,
+    ._credit_note_detial_page,
+    ._payment_received_detial_page {
+      padding: 0;
+      .credit_header {
+        font-weight: bold;
+        .ant-statistic {
+          font-weight: 400;
+        }
+      }
+      .user_bill_details {
+        gap: 10px;
+        margin-bottom: 20px;
+        .bill_left_column {
+          padding: 20px;
+          flex: 1;
+          align-items: flex-start;
+          .bills_profile_info {
+            width: 56.5%;
+          }
+          .product-details-right {
+            h5 {
+              font-weight: 600;
+            }
+          }
+          .user_default_image {
+            margin-right: 20px;
+            flex-shrink: 0;
+          }
+          .__bill_detials,
+          .__bill_payment_detials,
+          .__credit_note_detials,
+          .__payment_received_detials {
+            margin-right: 20px;
+            .__customer_info {
+              
+              &:last-child {
+                margin-bottom: 0;
+              }
+              img {
+                align-self: flex-start;
+              }
+              svg {
+                left: -2px;
+                transform: rotate(90deg);
+              }
+              .mail_icon {
+                width: 17px;
+                height: 15px;
+              }
+            }
+          }
+          ._items_term_and_conditions {
+            flex: 0 0 43.53333%;
+            align-self: baseline;
+            position: relative;
+            .product-details-right {
+              .ant-form-item {
+                margin-bottom: 0;
+                .ant-input-textarea {
+                  .ant-input {
+                    border: 1px solid var(--color-e2e2e2);
+                    background-color: #ffffff;
+                  }
+                }
+              }
+            }
+          }
+        }
+        .bill_right_column {
+          width: 28.1%;
+          padding: 20px;
+          min-height: 242px;
+          .bill_customer_info {
+            width: 100%;
+            .__customer_info {
+              align-items: flex-start;
+              margin-bottom: 11px;
+              &:last-child {
+                margin-bottom: 0;
+              }
+              .info_detail {
+                min-width: 125px;
+                margin-right: 5px;
+              }
+            }
+          }
+        }
+      }
+      .bill_top_header {
+        padding: 10px 10px 10px 15px;
+      }
+    }
+    .__item_details_tab_container {
+      .product-details-right {
+        ._item_details_summary_sec {
+          .bills_payment_mode {
+            span {
+              color: #b2001e;
+            }
+          }
+          .__customer_info {
+            &:nth-child(n + 2):nth-child(-n + 3) {
+              border-bottom: none;
+              padding-bottom: 0px;
+            }
+            .bills_value {
+              padding-bottom: 7px;
+            }
+          }
+          .bill_balance_due {
+            padding: 0;
+            .ant-statistic {
+              padding: 7px 0px;
+              border-top: 1px solid #e5e5e5;
+              border-bottom: 1px solid #e5e5e5;
+              .ant-statistic-content {
+                span {
+                  font-weight: bold;
+                }
+              }
+            }
+          }
+        }
+        .payment-terms-box {
+          width: 50%;
+          margin-right: 30px;
+          .bills_term_condition {
+            max-width: 410px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.bill_filter {
+  .custome-filter {
+    .filter-top {
+      .filter-badge {
+        -webkit-transition: ease-out 0.4s;
+        -moz-transition: ease-out 0.4s;
+        transition: ease-out 0.4s;
+      }
+      .newBluish_Shade {
+        background-color: transparent !important;
+        box-shadow: inset 10px 0 0 0 red !important;
+        &:hover {
+          background-color: transparent !important;
+          box-shadow: inset 100% 0 0 0 red !important;
+        }
+      }
+    }
+  }
+}
+// =======================
+// BillPayment modal
+// =======================
+.create_bill_payment {
+  .estimate_md_modal {
+    width: 1280px !important;
+    .ant-modal-content {
+      height: 508px;
+      .ant-modal-header {
+        .ant-modal-title {
+          padding: 8px 20px;
+        }
+      }
+      .ant-modal-body {
+        .main_wrapper {
+          .receive_payment_modal {
+            max-width: 1220px;
+            .form-row-container {
+              max-width: 840px !important;
+              .flex-new {
+                flex: 0 0 47.62%;
+              }
+              .input_field {
+                margin-bottom: 18px;
+              }
+            }
+            .bill_box {
+              width: 300px;
+              margin-right: 0;
+              .final_payment {
+                > .ant-typography {
+                  margin-bottom: 20px;
+                }
+                .ant-form-item-required,
+                .ant-typography {
+                  min-width: auto !important;
+                }
+
+                h5,
+                label {
+                  font-weight: 500;
+                }
+                .bill_amount_paid {
+                  .ant-typography {
+                    font-size: 16px;
+                    color: #161616;
+                    font-weight: 500;
+                  }
+                  .ant-statistic-content {
+                    line-height: 17px;
+                    font-weight: bold;
+                    span,
+                    .ant-statistic-content-prefix,
+                    .ant-statistic-content-value-int,
+                    .ant-statistic-content-value-decimal {
+                      font-size: 16px;
+                      color: #161616;
+                    }
+                  }
+                }
+                .credit_amount,
+                .shipping_inputbox {
+                  .ant-form-item-control,
+                  .ant-statistic {
+                    max-width: 200px;
+                    width: 100%;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.bill_payment_listing {
+  .breadcrumb_row {
+    padding: 24px 7px 10px 10px;
+  }
+  .custom-filter {
+    padding: 12px 15px 0 20px;
+  }
+  .my-custom-table {
+    .my-custom-table {
+      tbody {
+        tr {
+          padding: 6px 0;
+          .payment-info {
+            .customer_title {
+              line-height: 18px;
+            }
+          }
+          .payment-details-row {
+            line-height: 18px;
+            .center-badge {
+              line-height: 18px;
+            }
+          }
+        }
+        .product_info {
+          padding: 10px 10px 10px 0;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1500px) {
+  ._bill_details_header {
+    .ant-page-header-footer {
+      .user_bill_details {
+        flex-direction: column;
+        .bill_left_column {
+          margin-bottom: 0px;
+        }
+        .bill_right_column {
+          width: 100% !important;
+        }
+      }
+    }
+  }
+}
+
+//........................................................................................................
+//...............[BILL PAYMENT BACTCH ACTION POPUP ]................................................
+//........................................................................................................
+
+.batch--btn {
+  .ant-dropdown-menu {
+    padding: 14px 0 !important;
+  }
+}
+.form_group.receive_payment_text_area.mb-10 {
+  flex: 0 0 65%;
+  .ant-form-item-label {
+    padding-bottom: 0;
+  }
+}
+.payment-reference {
+  .ant-form-item-control-input {
+    height: 100%;
+    min-height: 100%;
+
+    input {
+      height: 40px;
+      padding-left: 10px;
+    }
+  }
+}
+
+.expence_account {
+  padding-left: 5px !important;
+}
+.bills--details{
+  word-break: break-all;
+  white-space: normal;
+}

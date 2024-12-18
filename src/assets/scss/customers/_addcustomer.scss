@@ -1,0 +1,62 @@
+.customer_breadcrumb{
+    background-color: var(--color-fff);
+}
+
+.flex_unset{
+    .ant-form-item-control-input-content{
+        flex: unset !important;
+    }
+}
+
+.fz-13{
+    color: var(--font-size-b5) !important;
+    font-size: var(--p-semi-bold);
+    color: var(--color-1616);
+    display: inline-block;
+}
+.btn-tax .ant-input-group-addon{
+    background-color: #eee;
+}
+
+.confirmation_name_modal{
+    .ant-modal-content{
+        padding: 10px 20px 20px;
+        .ant-modal-close{
+            top: 10px;
+        }
+        .ant-modal-header{
+            border-bottom: 1px solid #edf3f7;
+            padding-bottom: 8px;
+            margin-bottom: 10px;
+            .ant-modal-title{
+                font-weight: 500;
+                font-size: 15px;
+                color: #161616;
+            }
+        }
+        .name_heading{
+            font-weight: 700;
+            margin: 15px 0;
+        }
+        .text_area{
+            span{
+                margin-right: 5px;
+            }
+            i{
+                margin-bottom: 20px;
+                text-decoration: underline;
+            }
+        }
+        .ant-modal-footer{
+            .ant-btn-default{
+                background-color: var(--color-eee);
+                color: var(--color-1616);
+                border: none;
+                &:hover{
+                    color: var(--color-1616) !important;
+                     background-color: var(--color-f5f5);
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,106 @@
+.product_img_container {
+    .ant-image-img{
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+    }
+}
+.product_detail_pagination{
+    margin: 0 0px 0 10px;
+    .breadcrumb_row{
+        display: flex;
+        justify-content: space-between;
+        padding: 12px 12px 0 8px;
+        &.mb7{
+            margin-bottom: 7px;
+        }
+      
+        .add_btn_outer{
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center; 
+            .plus-icon{
+                filter: brightness(50);
+            }
+            >svg{
+                margin-right: 20px;
+                &:hover{
+                    path{
+                        fill : #161616;
+                    }
+                }
+            }
+            .popup-over{
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .ant-btn{
+                background-color: var(--color-0061DD);
+                border-radius: 3px;
+                width: 38px;
+                height: 36px;
+                border:1px solid var(--color-0061DD);
+                @extend .d-flex-all;
+                svg{
+                    margin-right: 0;
+                    fill: #fff;
+                }
+                &:hover{
+                    background-color: var(--color-007AFF);
+                }
+            }
+        }
+    }
+    .pagination_row{
+        justify-content: flex-start;
+        margin-top: 10px;
+        padding: 0 10px 0 9px;
+    }
+    .customer_detail_breadcrumb,.supplier_detail_breadcrumb{
+        padding-bottom: 12px;
+       
+    }
+}
+.inner_spacing{
+    padding: 10px 30px 0;
+}
+.status-input 
+.ant-select-single:not(.ant-select-customize-input)
+ .ant-select-selector .ant-select-selection-search-input{
+    height: 38px;
+}
+ .generic-dropdown-icon{
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 7px;
+    img{
+        filter: brightness(100);
+        transition: transform .2s;
+    }
+    &.ant-dropdown-open{
+        transform: rotate(0deg);
+        img{
+            transform: rotate(180deg);
+        }
+    } 
+}
+.button_flexbox .generic-dropdown-icon.ant-dropdown-open{
+    img{
+        transform: rotate(0deg);
+    }
+}
+
+.value_clr{
+   .ant-input{
+    &::placeholder{
+        color: #6e6e6e ;
+    }
+   }
+}
+.quantity_on_hand{
+    .action-preference{
+        justify-content: center;
+    }
+}

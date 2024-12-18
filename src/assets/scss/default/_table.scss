@@ -1,0 +1,593 @@
+.generic-table {
+
+  .ant-table-thead {
+    .product_table_empty_td {
+      padding-left: 0 !important;
+    }
+
+    .ant-table-cell {
+      padding: 9px 16px;
+      font-size: var(--font-size-b5);
+      line-height: var(--line-height-17);
+      color: var(--color-black);
+      font-weight: var(--p-semi-bold);
+      background-color: var(--color-e2e2e2);
+      height: 40px;
+      vertical-align: middle !important;
+
+      &::before {
+        all: unset !important;
+      }
+      &.px-5 {
+        padding: 9px 5px;
+      }
+    }
+  }
+  .ant-input-prefix {
+    margin-right: 0;
+  }
+
+  .ant-table-tbody {
+    tr {
+      .ant-table-cell {
+        padding: 12px 16px;
+        // padding: 5px 16px 4px;
+        font-size: var(--font-size-b3);
+        line-height: var(--font-size-b1);
+        border-bottom: 1px solid var(--color-E5E5E5) !important;
+        border-top: 0 !important;
+        font-weight: var(--p-regular);
+        color: var(--color-black);
+
+        .ant-statistic-content-value,
+        .ant-statistic-content-prefix {
+          color: var(--color-1616);
+          word-break: break-word;
+          
+        }
+        .adjust-amount-width .ant-statistic-content-value{
+          max-width: 104px;
+        }
+      }
+
+      &:nth-child(odd) {
+        background-color: var(--table-row-color);
+      }
+
+      &:nth-child(even) {
+        background-color: var(--color-white);
+      }
+    }
+
+    .ant-table-row-selected {
+      .ant-table-cell {
+        background-color: transparent !important;
+      }
+    }
+  }
+ &.categorie_table {
+    .ant-table-container .ant-table-content .ant-table-tbody .ant-table-cell {
+      padding: 9px 16px;
+    }
+  }
+  &.table-spacing-adjustment .ant-table-tbody tr .ant-table-cell,
+  &.table-spacing-adjustment .ant-table-thead tr .ant-table-cell{
+    &:not(:first-child,:last-child){
+      padding-left: 0 !important; 
+    }
+  }
+}
+
+.custom-tax-modal {
+  table {
+    overflow-y: auto;
+    min-width: 1080px;
+    .ant-table-summary {
+      tr {
+        td {
+          padding: 14px 16px !important;
+        }
+      }
+    }
+
+    .ant-table-tbody {
+      tr {
+        .ant-table-cell {
+          padding: 10px 16px;
+          color: #161616;
+        }
+      }
+    }
+  }
+}
+.custom-tax-modal {
+  .ant-table-content {
+    overflow-y: auto;
+    table {
+      min-width: 1080px;
+    }
+  }
+}
+.metaphor {
+  table {
+    margin-bottom: 20px;
+
+    .ant-table-thead,
+    .ant-table-tbody {
+      .ant-table-cell {
+        color: var(--color-1616);
+
+        .ant-statistic-content-value {
+          color: var(--color-1616);
+        }
+      }
+    }
+  }
+}
+
+.product_heading {
+  font-size: 14px;
+  font-weight: var(--p-regular);
+  color: var(--color-1616);
+  white-space: normal;
+}
+
+.product-badge {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.product-row {
+  display: flex;
+
+  .ant-image {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    border: 1px solid var(--color-E5E5E5);
+    border-radius: 3px;
+    margin-right: 7px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+.product-row-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.my-custom-table #wrapper .sticky_table table .detail-body {
+  td:nth-child(1) {
+    align-self: flex-start;
+    padding-top: 15px;
+  }
+}
+
+/*========================================
+  journal Page 
+========================================*/
+$price_column_width:16.33%;
+$small_column_width:10%;
+$normal_column_width:7%;
+$mini_colum_width:5%;
+$title_width:25%;
+$equalize_column_width:14%;
+
+.journal-tbl {
+  width: 100%;
+  position: relative;
+
+  th {
+    background-color: var(--color-e2e2e2);
+    height: 40px;
+    vertical-align: middle;
+    font-size: var(--font-size-b5);
+    font-weight: var(--p-semi-bold);
+    color: var(--color-black);
+    padding: 10px 16px;
+    text-align: left;
+    &:first-child {
+      width: 8%;
+    }
+    &:nth-child(3) {
+      width: 8%;
+    }
+  }
+
+  tr {
+    background-color: var(--color-fff);
+
+    td {
+      padding: 10px 16px;
+      color: var(--color-1616);
+      vertical-align: top;
+      word-break: break-word;
+      .before-div {
+        &:before {
+          content: "";
+          border: 1px solid #ccc;
+          left: 0;
+          right: 0;
+          position: absolute;
+        }
+
+        .before-div-total {
+          padding: 8px 0;
+          @extend .d-flex;
+          @extend .justify_between;
+          width: 68%;
+          margin-left: auto;
+          border-bottom: 2px solid #ccc;
+        }
+
+        .no-space-first {
+          width: 53%;
+          @extend .right-align;
+          word-break: break-word;
+          padding-right: 3%;
+        }
+        .no-space-second {
+          word-break: break-word;
+        }
+      }
+    }
+
+    .name-truncate {
+      width: 260px;
+      @include lineClamp(2);
+      @extend .text_truncate;
+      word-break: break-word;
+    }
+    .number-truncate {
+      @include lineClamp(2);
+      @extend .text_truncate;
+      word-break: break-word;
+    }
+
+    &:nth-child(odd) {
+      background-color: #fcfcf9;
+    }
+
+    .tble-summary-top {
+      width: 68%;
+    }
+
+    .tble-summary-bottom {
+      margin-bottom: 8px;
+    }
+  }
+  &.generic-column-division{
+    thead {
+      position: sticky;
+      top: 0;
+      .item-name{
+        width: 30%;
+        padding-right: 10px;
+        word-break: break-word;
+        &.w-20{
+          width: 20%;
+        }
+      }
+      .sku,.est-date,.exp-date,.qty-order,.interval,.document-no,.method{
+        width: $small_column_width;
+      }
+      .date,.count{
+        width: $normal_column_width;
+      }
+      .record-count{
+        width: $mini_colum_width;
+      }
+      .average-price,
+      .qty-sold,
+      .sale-amount,.tax,.sale,
+      .price{
+        width: $price_column_width;
+        &.w-10{
+          width: $small_column_width;
+        }
+      }
+      .sale{
+        width: $small_column_width;
+      }
+      .customer-name,
+      .product-name{
+        width: $title_width;
+        &.w-20{
+          width: 20%;
+        }
+      }
+   
+      .cus-price,
+      .report-title-name,
+      .item-title,
+      .item-price,
+      .total-price{
+        width: $equalize_column_width;
+      }
+
+    }
+    .no-break{
+      white-space: nowrap;
+    }
+    &.customer-balance-table{
+      tbody tr td:not(:first-child,:nth-child(3)){
+        cursor: pointer;
+      }
+    }
+  }
+}
+.journal_item_table,
+.ledger_item_table {
+  overflow: auto;
+  .journal-tbl {
+    min-width: 1500px;
+    margin-bottom: 0;
+  }
+}
+.journal_item_table,
+.ledger_item_table {
+  max-height: calc(100vh - 180px);
+  .journal-tbl {
+    thead {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+  }
+}
+.journal_item_table {
+  .infinite-scroll-component{
+    max-height: calc(100vh - 180px) !important;
+  } 
+}
+/*----------------------
+    Table hover feature
+-----------------------*/
+.table__hover--feature {
+  .ant-table-content {
+    tbody {
+      tr {
+        .product_table_empty_td {
+          .ant-select-disabled {
+            .ant-select-selection-search-input {
+              cursor: not-allowed !important;
+            }
+          }
+          .ant-select-show-search:not(.ant-select-open, .ant-select-disabled):hover
+            .ant-select-selector {
+            background-color: #e5e5e5;
+          }
+        }
+
+        &:nth-child(odd) {
+          .ant-table-cell {
+            .ant-input,
+            .ant-select .ant-select-selector {
+              background-color: #fcfcf9;
+            }
+
+            .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled) {
+              background-color: #fcfcf9;
+            }
+
+            .qunatity_table_box {
+              .ant-input:not(.ant-input-disabled):hover {
+                background-color: #e5e5e5;
+              }
+              .qty_units {
+                color: var(--color-6e6e);
+              }
+            }
+          }
+
+          .discount_dropdown .ant-select-selector {
+            background-color: #eee !important;
+          }
+          .ant-table-cell-row-hover {
+            background-color: #f5f5f5;
+            .discount_dropdown.ant-select-open {
+              .ant-select-selector {
+                background-color: #e5e5e5 !important;
+              }
+            }
+            .discount_dropdown .ant-select-selector {
+              background-color: #eee;
+            }
+            .ant-input,
+            .ant-select .ant-select-selector {
+              background-color: #f5f5f5;
+            }
+
+            .ant-input-affix-wrapper.ant-input-affix-wrapper-disabled {
+              background-color: #f5f5f5;
+              .ant-input {
+                background-color: #f5f5f5;
+              }
+              &:hover {
+                background-color: #f5f5f5;
+              }
+            }
+
+            .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled) {
+              background-color: #f5f5f5;
+
+              &:hover {
+                background-color: #e5e5e5;
+                .ant-input {
+                  background-color: #e5e5e5;
+                }
+              }
+            }
+            .estimate_select:not(.ant-select-disabled) {
+              &:hover {
+                .ant-select-selector {
+                  background-color: #e5e5e5;
+                }
+              }
+            }
+            .estimate_discount_field {
+              .discount_field:not(.ant-input-disabled):hover {
+                background-color: #e5e5e5;
+              }
+            }
+          }
+
+          .ant-input-affix-wrapper {
+            background-color: #fcfcf9;
+          }
+          .ant-input-affix-wrapper.ant-input-affix-wrapper-focused {
+            background-color: #fff !important;
+          }
+        }
+
+        &:nth-child(even) {
+          .ant-input-affix-wrapper,
+          .ant-input,
+          .ant-select-selector {
+            background-color: #fff;
+          }
+          .qunatity_table_box {
+            .ant-input {
+              line-height: 1.5714285714285714;
+            }
+          }
+          .discount_dropdown {
+            .ant-select-selector {
+              background-color: #eee;
+            }
+          }
+          .ant-table-cell-row-hover {
+            .discount_dropdown {
+              &:hover,
+              &.ant-select-open {
+                .ant-select-selector {
+                  background-color: #e5e5e5 !important;
+                }
+              }
+            }
+
+            .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled),
+            .ant-input:not(.ant-input-disabled),
+            .ant-select:not(.ant-select-disabled) .ant-select-selector {
+              &:hover {
+                background-color: #e5e5e5;
+              }
+            }
+            .ant-input-affix-wrapper:not(.ant-input-affix-wrapper-disabled) {
+              &:hover {
+                .ant-input {
+                  background-color: #e5e5e5;
+                }
+              }
+            }
+          }
+        }
+
+        .ant-input {
+          &:hover {
+            border-color: #e2e2e2;
+          }
+
+          &:focus {
+            border-color: #0061dd !important;
+            background-color: #ffffff !important;
+          }
+
+          &:focus:hover {
+            background-color: #ffffff !important;
+          }
+        }
+
+        .ant-table-cell-ellipsis {
+          .ant-select-open {
+            .ant-select-selector:hover {
+              background-color: #ffffff;
+            }
+          }
+        }
+
+        .estimate_discount_field,
+        .qunatity_table_box {
+          .ant-input {
+            border: 1px solid #e2e2e2;
+          }
+        }
+
+        .ant-select {
+          .ant-select-selector {
+            border-color: #e2e2e2;
+          }
+        }
+
+        .ant-select-open {
+          .ant-select-selector,
+          &:hover .ant-select-selector {
+            border-color: #0061dd !important;
+            background-color: #fff !important;
+          }
+        }
+
+        .ant-input-affix-wrapper-focused {
+          border-color: #0061dd;
+
+          &:hover {
+            background-color: #ffffff !important;
+
+            .ant-input {
+              background-color: transparent !important;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.categorie_table {
+  table {
+    .ant-table-tbody {
+      .ant-table-row {
+        td {
+          padding-block: 8.5px !important;
+        }
+      }
+    }
+  }
+}
+// ...............................................................
+// .........[product cateegories table hover affect fix]..........
+// ...............................................................
+
+.categorie_table {
+  th {
+    transition: background-color .39s ease;
+
+    &.ant-table-cell {
+      background-color: #e2e2e2 !important;
+
+      &:hover {
+        background-color: #eee !important;
+      }
+
+      &:nth-child(1) {
+        background-color: #cccccc !important;
+
+        &:hover {
+
+          background-color: #dcdcdc !important;
+        }
+      }
+
+      &:nth-child(2) {
+        border-right: 2px solid #d9d9d9;
+
+      }
+    }
+  }
+}
+// ...............................................................

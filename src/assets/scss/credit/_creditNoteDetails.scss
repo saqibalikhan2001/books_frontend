@@ -1,0 +1,245 @@
+.credit__note--quantity {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.generic-table
+  .ant-table-content
+  .ant-table-tbody
+  tr
+  .ant-table-cell:has(.del_btn) {
+  padding: 8px 5px !important;
+}
+
+.invoice--creditNotes .left-gap {
+  margin-left: 0;
+}
+
+.credit_note_listing {
+  .item_listing {
+    .filter-bottom {
+      .downLoad {
+        stroke-width: 0.8px;
+        color: #6e6e6e;
+        margin-right: 5px;
+
+        &:hover {
+          color: #000000;
+        }
+      }
+    }
+  }
+}
+
+.refund-popup-left {
+  flex: 0 0 50%;
+}
+
+.refund-popup-right {
+  flex: 1;
+  justify-content: flex-end;
+}
+
+.refund-popup-inner {
+  label {
+    color: var(--color-black);
+    font-size: 14px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+
+  p {
+    font-size: 14px;
+    color: var(--color-1616);
+    margin: 0;
+  }
+}
+
+.refund_modal {
+  .ant-modal-content {
+    height: 555px !important;
+    max-height: 555px !important;
+    margin-bottom: 0;
+
+    .ant-modal-header {
+      margin-bottom: 14px;
+
+      .ant-modal-title {
+        padding: 10px 20px;
+      }
+    }
+
+    .ant-modal-body {
+      .refund-popup-bottom {
+        max-width: 320px;
+        margin-left: auto;
+        padding-right: 0;
+
+        .final_payment {
+          margin-bottom: 27px;
+
+          span.ant-typography {
+            font-weight: 400;
+            min-width: 52%;
+          }
+
+          .credit_amount {
+            span {
+              border-bottom: 2px solid #e5e5e5;
+              border-top: 1px solid #e5e5e5;
+              margin: 0;
+            }
+          }
+
+          .ant-form-item-control-input-content {
+            .ant-input-number-in-form-item {
+              .ant-input-number-input {
+                height: 38px;
+              }
+            }
+          }
+
+          .shipping_inputbox {
+            .ant-form-item-control {
+              min-width: 52%;
+            }
+          }
+        }
+      }
+
+      .button_flexbox {
+        .new_prod_btn {
+          .ant-btn-default {
+            border-radius: 3px;
+          }
+        }
+      }
+
+      .form_group {
+        .ant-picker {
+          max-width: 100%;
+          border-color: var(--color-e2e2e2);
+          height: 40px;
+
+          &:hover {
+            background-color: var(--color-f5f5);
+          }
+
+          .ant-picker-input {
+            input {
+              cursor: pointer;
+              font-size: 14px;
+            }
+          }
+        }
+
+        .ant-picker-focused {
+          border-color: var(--color-0061DD);
+        }
+
+        .credit_info {
+          h5 {
+            color: var(--color-black);
+            margin-right: 10px;
+            font-weight: bold;
+          }
+
+          span {
+            color: var(--color-1616);
+          }
+        }
+      }
+
+      .bill_box {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.credit_refund_modal {
+  .ant-modal-content {
+    height: auto !important;
+    padding-bottom: 20px !important;
+  }
+}
+
+.refund-popup-bottom h5 {
+  font-size: var(--font-size-b3);
+  font-weight: var(--p-bold);
+  text-align: right;
+  color: #000000;
+  min-width: 130px !important;
+  line-height: 40px;
+}
+
+.m--unset {
+  margin: unset;
+
+  table {
+    margin-bottom: 15px;
+  }
+}
+
+.sort_modal_title {
+  color: #202020 !important;
+}
+
+.disabled-button {
+  background-color: #eeeeee !important;
+}
+
+// ---------------------------------
+// applied invoice start
+// ---------------------------------
+
+.applied_invoice_modal {
+  .ant-modal-content {
+    min-height: 475px;
+    height: unset !important;
+
+    .bill_box {
+      margin: unset;
+    }
+
+    .main_wrapper {
+      ._container {
+        min-height: auto;
+        padding: 0;
+
+        .invoice_sub_heading {
+          padding: 10px 0px;
+
+          .form_group {
+            font-size: var(--font-size-b3);
+            color: var(--color-black);
+            font-weight: var(--p-bold);
+
+            &:last-child {
+              text-align: end;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.generic_modal_style.applied_invoice_modal {
+  .ant-modal-content {
+    height: 565px;
+  }
+}
+
+.payment-title {
+  justify-content: end;
+}
+
+.applied_invoice_modal {
+  .bill_box {
+    .final_payment {
+      margin-bottom: 20px;
+    }
+  }
+}

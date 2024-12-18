@@ -1,0 +1,411 @@
+
+.__credit--refund--details {
+  .fw-md {
+    min-width: 150px;
+    display: inline-block;
+  }
+  .ant-divider-horizontal {
+    margin: 5px 0;
+  }
+}
+.product_list{
+  &.bill_payment_list{
+    .ant-dropdown-trigger{
+    justify-content: space-between;
+    }
+  }
+}
+.bill_payment_detail {
+  .__items_details_header {
+    .ant-page-header-heading {
+     .ant-page-header-heading-title{
+        line-height: 20px;
+      }
+      .ant-page-header-heading-extra{
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}
+.my-custom-table {
+  th {
+   cursor: pointer;
+  }
+}
+
+// **************************************
+//   View Supplier details popup
+// ***************************************
+.bill_payment_popup{
+  .ant-modal-content{
+    overflow: hidden auto;
+    height: 75vh;
+    .__items_details_header {
+      .ant-page-header-heading{
+        .ant-page-header-heading-left{
+          .ant-page-header-heading-title{
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}
+.supplier-details-border {
+  position: relative;
+  flex: 0 0 5%;
+  display: flex;
+  justify-content: center;
+  span::before {
+      position: absolute;
+      content: '';
+      background-color: #E5E5E5;
+      width: 1px;
+      height: 100%;
+      display: inline-block;
+    }      
+  
+  }
+
+.generic_modal_style {
+  .supplier-popup-main {
+    padding: 20px 30px 0;
+    margin: 0;
+    &.__items-details_container {
+      .ant-tabs-nav{
+        margin-bottom: 18px;
+      }
+      .ant-tabs-content-holder {
+        .ant-tabs-tabpane {
+          &:not(:nth-of-type(4), :nth-of-type(5), :nth-of-type(6)) {
+            padding-right: 0px;
+            padding-left: 0;
+          }
+        }
+      }
+    }
+    .supplier-details-popup {
+      border-bottom: 1px solid #e5e5e5;
+      padding-bottom: 8px;
+
+      .supplier-profile-info {
+        gap: 0 21px;
+
+        .supplier-info-left {
+          .user_default_image {
+            width: 100px;
+            height: 100px;
+          }
+        }
+
+        .supplier-info-right {
+          .supplier-name {
+            font-weight: bold;
+          }
+
+          .mb-5 {
+            gap: 0 8px;
+          }
+
+          .stock-dues,
+          .stock-heading {
+            color: #161616;
+          }
+
+          .stock-heading {
+            font-weight: 600;
+          }
+
+          .stock-dues {
+            font-weight: 400;
+          }
+
+          .stock-dues {
+            .supplier-value {
+              margin: 0;
+              color: #0061dd;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+    .suppiler-payable-sec {
+      padding-top: 8px;
+      padding-bottom: 10px;
+      justify-content: space-between;
+      .suppiler-payable-left {
+        flex: 0 0 44%;
+        .product_row {
+          justify-content: unset;
+          min-height: 22px;
+            .product_key{
+              min-width: 140px;
+            }
+        }
+      }
+      .suppiler-payable-right {
+        flex: 0 0 44%;
+        .product_row {
+          justify-content:unset;
+          min-height: 22px;
+          .product_key{
+            min-width: 150px;
+            padding: 0;
+          }
+        }
+    }
+      .product_row {
+        margin-bottom: 6px;
+        .product_key{
+          flex: unset;
+        }
+        align-items: center;
+      }
+    }
+    .supplier-details-sec {
+      .supplier-header {
+        padding: 10px;
+        background-color: #e2e2e2;
+        font-size: 13px;
+        line-height: 17px;
+        font-weight: 600;
+      }
+      .supplier-details-inner{
+        padding: 10px 0 12px 10px;
+        justify-content: space-between;
+        .supplier-detalis-left{
+          flex: 0 0 43.5%;
+        }
+        .supplier-detalis-right {
+          flex: 0 0 44.5%;
+          padding-right: 0 !important;
+          .product_row {
+            .product_key{
+              max-width: 77px;
+            }
+            .product_value{
+              text-align: left;
+            }
+          }
+        }
+        .product_row {
+          align-items: center;
+          margin-bottom: 4px;
+          line-height: 18px;
+          .product_key{
+            h5 {
+              font-size: 13px !important;
+          }
+          }
+        }
+        .additional_address{
+          flex: 0 0 100%;
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          .product_row {
+            flex:  0 0 44.5%;
+            margin-bottom: 20px;
+            .product_key{
+              max-width: 140px;
+              h5{
+                line-height: 30px;
+              }
+            }
+          }
+        }
+        .additional_address{
+          .product_row:nth-child(2n+1){
+            padding-right: 0;
+            flex: 0 0 88.5%;
+            margin-bottom: 0;    
+          }
+        }
+      }
+     
+    }
+    .address-details-sec{
+      .supplier-details-inner{
+        .product_row {
+          align-items: start;
+          .product_key{
+           flex: unset;
+           max-width: 123px;
+          }
+        }
+        .supplier-detalis-right{
+          .product_row {
+            .product_key{
+              max-width: 123px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+// ...............................................................................................
+//...............................[BILL PAYMENTS DETAIL PAGE]......................................
+
+.billpayments--wrapper {
+  .bill_left_column {
+    .bills_profile_info {
+      .ant-image {
+        margin-right: 20px;
+      }
+    }
+  }
+
+  .height {
+    margin-bottom: 4px;
+  }
+}
+
+// ........................................................................................................
+// ................................[TRANSACTION POPUP TAB].................................................
+// ........................................................................................................
+
+.supplier-popup-main {
+      .main_heading {
+        margin-bottom: 10px; 
+      }
+      .summary_list {
+        .product_row {
+          margin-bottom: 10px;
+          padding-right: 0;
+        }
+        .supplier_closing_balance{
+          padding: 5px 0;
+        }
+      }
+    :is(.ant-tabs-left) {
+        .ant-tabs-content-holder {
+          border-left: none;
+          margin-left: 10px;
+          .ant-tabs-content{
+              .ant-tabs-tabpane{
+                  padding: 0 !important;
+              }
+          }
+        }
+      }
+      .ant-tabs-nav-wrap {
+        .ant-tabs-nav-list {
+          .ant-tabs-tab {
+            margin: 0 0 0 0px;
+          }
+        }
+      }
+    .ant-tabs-content-holder {
+      .ant-tabs-nav {
+        border-bottom: none;
+        height: calc(100vh - 380px);
+      }
+      .ant-tabs-nav-wrap {
+        .ant-tabs-nav-list {
+          min-width: 198px;
+          width: 100%;
+          background-color: #f6f6f6;
+  
+          .ant-tabs-ink-bar-animated {
+            display: none !important;
+          }
+          .ant-tabs-tab {
+            margin: 0 10px;
+            padding: 0;
+            &:not([data-node-key="4"]) {
+              border-bottom: 0.5px solid #e5e5e5;
+            }
+  
+            &.ant-tabs-tab-active {
+              .ant-tabs-tab-btn {
+                font-weight: 800;
+                color: #0050a8;
+              }
+            }
+  
+            .ant-tabs-tab-btn {
+              color: #161616;
+              font-size: 14px;
+              line-height: 17px;
+              font-weight: 400;
+              padding: 10px 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+//   ......................................................................................................
+//................................[ STATEMENT POPUP TAB ]..................................................
+// ........................................................................................................
+h4.summary{
+    font-size: 14px !important;
+    font-weight: bold;
+}
+
+.bill--ls{
+   .product_row{
+   h5,span{
+    font-weight: 400;
+   }
+   }
+   .statements--border{
+    border-bottom: 1px solid #e5e5e5;
+    position: relative;
+    &:last-child{
+      border-bottom: none;
+      &::after , &::before{ 
+        content: '';
+        position: absolute;
+        height: 1px;
+        width: 100%;
+        background-color: #e5e5e5;
+        bottom: 0px;
+      }
+      &::after{  
+        bottom: -2px;
+      }
+    }
+    h5,span{
+        margin-bottom: 10px;
+    }
+   }
+}
+
+
+
+//............................................................................................................
+// .................................. [ bills-payment filter popup fixes ] ...................................
+//............................................................................................................
+
+.space--fixer{
+    .ant-popover-inner {
+        padding: 20px 16px 25px;
+    }
+}
+
+
+
+// ..............................................................................................................
+// ..............................[ restricting _ the repel _effect ].............................................
+//...............................................................................................................
+.dir-col--unset{
+  .product_row{
+    flex-direction: unset;
+  }
+}
+//...............................................................................................................
+
+
+.journal-tbl.__general--Ledger th:first-child,
+.journal-tbl.__general--Ledger th:nth-child(3)
+{
+    width: 20%;
+}

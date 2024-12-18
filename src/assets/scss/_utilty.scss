@@ -1,0 +1,78 @@
+.bold {
+  font-weight: bold;
+}
+.no-line-height {
+  line-height: 0;
+}
+.gap-10 {
+  gap: 10px;
+}
+
+.create-account-modal .ant-modal-content{
+    min-height: 770px;
+    max-height: 700px;
+    padding-bottom: 0;
+    overflow-y: auto;
+}
+//...................filter for utility class to transform  images from default color into white............................
+.required_clr--white {
+  filter: brightness(0) saturate(100%) invert(99%) sepia(5%) saturate(1130%) hue-rotate(222deg)
+    brightness(120%) contrast(100%);
+}
+// ................................... unneseassary scroll managed ..........................................................
+.no-fix-height {
+  // height: calc(100vh - 145px);
+}
+// ..............................all modals header height standard symmetry ...............................................
+.modals-header {
+  .ant-page-header-heading {
+    display: flex;
+    align-items: center;
+    .ant-page-header-heading-left {
+      height: 32px;
+    }
+  }
+}
+.adjust-gap {
+  gap: 7px;
+}
+:is(.ant-form label) {
+  color: #161616;
+}
+// ...................................shared icon in add organization badge alignment & spacing fixed ......................
+.shared-icon {
+  margin-right: 4px;
+}
+//..............................product detail modal spacing adjusted in all modules ...............................................
+.adjust_symmetical--gap {
+  .__items_details_header .ant-page-header-footer {
+    padding: 0 30px;
+  }
+}
+// ............................... customer form modal spacing adjusted in all modules..............................................
+
+
+.main_wrapper ._container.px-30 {
+  padding: 0 30px;
+  &.pb-20 {
+    padding-bottom: 20px;
+  }
+
+}
+
+// .billing--address__modal {
+//   padding: 0 !important;
+// }
+
+.get-space {
+  .flex-new {
+    flex: 0 0 33%;
+  }
+}
+.get-spacing {
+  .main_wrapper {
+    ._container {
+      padding: 0 30px 20px;
+    }
+  }
+}

@@ -1,0 +1,797 @@
+@import "../default/mixins";
+/*======================================
+    Mixin Input Box & Utilities Classes
+========================================*/
+
+@mixin border-bottom($width, $pb: 0) {
+  border-bottom: $width solid var(--color-E5E5E5);
+  padding-bottom: $pb;
+}
+
+._1px {
+  @include border-bottom(1px, 10px);
+  &.pb-0 {
+    padding-bottom: 0;
+  }
+}
+
+._2px {
+  @include border-bottom(2px, 10px);
+}
+
+@mixin inputNumber($width, $height, $lineHeight, $borderColor, $textAlign) {
+  width: $width;
+  height: $height;
+  line-height: $lineHeight;
+  border-color: $borderColor;
+  text-align: $textAlign;
+}
+
+.button_flexbox .ant-form-item {
+  @extend .mb-0;
+}
+
+%select_item {
+  display: flex;
+  align-items: center;
+}
+
+%select_item_img {
+  width: 40px;
+  height: 40px;
+  margin-right: 7px;
+  border-radius: 0;
+  flex-shrink: 0;
+  @extend .self-start;
+
+  .ant-image,
+  img {
+    @extend .w-100;
+    @extend .h-100;
+  }
+
+  img {
+    border: 1px solid var(--color-E5E5E5);
+    border-radius: 3px;
+    object-fit: cover;
+  }
+}
+
+%item_name {
+  color: var(--color-1616);
+  font-size: var(--font-size-b3);
+  line-height: 20px;
+}
+
+.h-40 {
+  height: 40px;
+}
+
+.ph-5 {
+  padding: 0 5px;
+}
+
+.estimate-table.generic-table {
+  .ant-table-content {
+    margin-bottom: 10px;
+  }
+  table {
+    margin: 0 auto 0;
+    .ant-table-tbody tr .ant-table-cell {
+      padding: 14px 5px;
+      vertical-align: top;
+
+      .text_center {
+        padding: 0;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        .ant-statistic-content {
+          width: 100%;
+          .ant-statistic-content-value {
+            word-break: break-word;
+          }
+        }
+      }
+    }
+
+    .ant-table-tbody {
+      .ant-table-cell-ellipsis {
+        .select_item {
+          &:hover {
+            .ant-select-selector {
+              input {
+                cursor: pointer;
+              }
+            }
+          }
+        }
+
+        .select_item,
+        .estimate_select,
+        .discount_dropdown {
+          &:hover {
+            .ant-select-arrow {
+              display: flex;
+            }
+          }
+
+          .ant-select-selection-item {
+            padding-inline-end: 15px;
+          }
+        }
+
+        .estimate_select_items {
+          .ant-select-selection-search-input {
+            height: 100%;
+          }
+        }
+      }
+
+      td {
+        &:first-child {
+          padding-left: 1px !important;
+
+          svg {
+            width: 19px;
+            height: 40px;
+
+            path {
+              color: #a8a8a8;
+            }
+          }
+        }
+
+        div.ant-statistic {
+          align-items: center;
+          justify-content: right;
+          border-radius: 4px;
+          padding-right: 5px;
+        }
+
+        &:nth-last-child(2) {
+          padding-right: 8px;
+        }
+      }
+    }
+
+    .ant-table-thead {
+      .ant-table-cell {
+        padding: 9px 16px 9px 5px;
+
+        &[title="Discount"] {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
+
+.form_group {
+  position: relative;
+
+  .edit_bill {
+    position: absolute;
+    right: 0;
+    top: 5px;
+    fill: var(--color-0061DD);
+    cursor: pointer;
+    z-index: 10;
+  }
+}
+
+.estimate_customer {
+  .css-1u9des2-indicatorSeparator {
+    display: none;
+  }
+
+  > .ant-form-item {
+    margin-bottom: 0;
+  }
+
+  .ant-form-item-control-input-content {
+    > .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+
+  .ant-btn {
+    padding: 0;
+
+    span {
+      cursor: pointer;
+    }
+  }
+
+  .flex_root {
+    margin-bottom: 0px;
+  }
+
+  .invoice_btn {
+    display: flex;
+    justify-content: space-between;
+
+    .ant-form-item {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.cursor_pointer {
+  .ant-form-item {
+    .ant-picker-large {
+      .ant-picker-input {
+        cursor: pointer;
+
+        input {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+.label_custom_style {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+.unselect_tax {
+  &:hover {
+    .ant-select-arrow {
+      display: flex !important;
+    }
+  }
+}
+
+.bill_address_detail {
+  word-break: break-word;
+  display: block;
+  line-height: 18px;
+
+  &.cus_name {
+    line-height: 20px;
+  }
+}
+
+.estimate_product_listing {
+  .ant-table-cell {
+    white-space: unset;
+  }
+
+  .ant-select-selector {
+    .ant-select-selection-search-input {
+      @extend .h-40;
+    }
+
+    .ant-select-selection-placeholder {
+      line-height: 40px !important;
+    }
+  }
+
+  .estimate_select .ant-select-selector {
+    height: 40px;
+    border-color: var(--color-e2e2e2);
+    .ant-select-selection-search-input {
+      @extend .h-40;
+    }
+    .ant-select-selection-item {
+      line-height: 40px;
+    }
+  }
+
+  .discount_field {
+    border-radius: 4px 0 0 4px;
+    @extend .h-40;
+    width: 100%;
+    border-color: var(--color-e2e2e2);
+    border-right: none;
+    text-align: right;
+    padding: 0 10px;
+
+    .ant-input-number-input {
+      @extend .h-40;
+      text-align: left;
+    }
+  }
+
+  .discount_field.no-border {
+    border-right: 1px solid #2580e8;
+  }
+
+  .discount_dropdown .ant-select-selector {
+    @extend .h-40;
+    border-color: var(--color-e2e2e2);
+    border-radius: 0 2px 2px 0;
+    background-color: var(--color-eee);
+    width: 48px;
+    padding: 0 3px 0 10px;
+    align-items: center;
+  }
+
+  .ant-select-arrow {
+    svg {
+      fill: #161616;
+    }
+  }
+}
+
+.select_item {
+  .ant-select-selector {
+    min-height: unset !important;
+    height: 40px !important;
+     .ant-select-selection-placeholder {
+      line-height: 40px;
+      padding-left: 6px;
+    }
+  }
+
+  .ant-select-selection-item {
+    @extend %select_item;
+
+    .ant-avatar {
+      @extend %select_item_img;
+    }
+
+    .product_name {
+      color: var(--color-0061DD);
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: normal;
+      line-height: 20px;
+      line-height: 20px;
+    }
+  }
+}
+
+.my-text-area.ant-input-textarea {
+  .ant-input {
+    border-color: transparent;
+    background-color: #fafafa;
+    height: auto;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+}
+
+.item_dropdown {
+  padding: 16px 9px;
+  &.flex-unset {
+    .ant-select-item-option-content {
+      display: unset;
+    }
+  }
+  .ant-form-item {
+    margin-bottom: 19px;
+  }
+
+  .ant-select-item-option-content {
+    @extend %select_item;
+
+    .ant-avatar {
+      @extend %select_item_img;
+    }
+
+    .product_name {
+      display: block;
+      @extend %item_name;
+    }
+  }
+
+  .ant-select-selection-item,
+  .ant-table-cell-ellipsis {
+    white-space: unset;
+  }
+}
+.estimate_biling_list {
+  .ant-select-item-option-content {
+    display: block;
+  }
+}
+.product_text_detail {
+  text-align: left;
+  max-width: 85%;
+  line-height: 25px;
+  .product_sku {
+    font-size: 13px;
+    color: #6e6e6e;
+    line-height: 20px;
+  }
+}
+
+.shipping_input_field {
+  height: 100%;
+
+  .ant-input-number-input {
+    height: 40px;
+  }
+
+  .ant-input-prefix {
+    margin-right: 0;
+  }
+}
+
+.confirm-popp--main {
+  .del_btn .ant-btn {
+    background-color: transparent !important;
+    border: none;
+    box-shadow: unset;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    svg {
+      fill: var(--color-black);
+    }
+    &:hover(:disabled) {
+      cursor: pointer;
+      border-color: transparent;
+      svg {
+        fill: var(--color-black);
+      }
+    }
+    &:disabled:hover {
+      cursor: no-drop;
+    }
+  }
+}
+.bill_box {
+  display: flex;
+
+  .final_payment {
+    min-width: 320px;
+    width: auto;
+    max-width: 100%;
+    position: relative;
+    .ant-statistic-content {
+      font-size: 14px;
+    }
+    .ant-typography {
+      @extend .mb-0;
+      font-size: var(--font-size-b3);
+      font-weight: var(--p-bold);
+      text-align: right;
+      color: #000000;
+      min-width: 120px;
+      margin: 0 10px;
+
+      & + svg {
+        margin-left: 8px;
+        fill: var(--color-dark-gray);
+
+        &:hover {
+          fill: var(--color-1616);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .ant-statistic {
+      .ant-statistic-content-prefix,
+      .ant-statistic-content-value-int,
+      .ant-statistic-content-value {
+        color: #161616 !important;
+        font-size: var(--font-size-b3);
+        word-break: break-word;
+        white-space: pre-wrap;
+      }
+    }
+
+    .shipping_inputbox {
+      width: 100%;
+      margin-bottom: 0;
+
+      .ant-row.ant-form-item-row {
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+
+        .ant-form-item-label {
+          padding-bottom: 0;
+        }
+
+        .ant-form-item-control {
+          max-width: 150px;
+
+          .ant-form-item-control-input,
+          .ant-form-item-control-input-content,
+          .ant-input-affix-wrapper {
+            height: 40px;
+          }
+
+          .ant-input-number {
+            border-color: var(--color-e2e2e2);
+            width: 100%;
+          }
+        }
+      }
+
+      .ant-input-number-affix-wrapper {
+        width: 100%;
+      }
+    }
+
+    .bill_discount_field {
+      .w-100 {
+        .ant-form-item-control {
+          max-width: 110px !important;
+        }
+      }
+    }
+
+    .discount_input_field {
+      .discount_label {
+        justify-content: flex-end;
+      }
+
+      .estimate_discount_field {
+        .shipping_inputbox {
+          .ant-form-item-label {
+            text-align: end;
+          }
+        }
+      }
+    }
+  }
+}
+
+.qty_box {
+  @include inputNumber(100%, 40px, 40px, var(--color-e2e2e2), left);
+
+  &.box-perf {
+    text-align: center;
+    width: 58px;
+  }
+  .ant-input-number-input {
+    @extend .h-40;
+    text-align: left;
+    @extend .ph-5;
+  }
+
+  padding-left: 11px !important;
+}
+
+.rate_box {
+  @include inputNumber(100%, 40px, 40px, var(--color-e2e2e2), left);
+  background: #ffffff;
+
+  .ant-input-number-input {
+    @extend .h-40;
+    text-align: left;
+    @extend .ph-5;
+  }
+
+  .ant-input-number-prefix {
+    height: 40px;
+  }
+
+  .ant-input-prefix {
+    margin-right: 0;
+  }
+}
+
+.rate_box.no-border {
+  background-color: transparent;
+
+  .ant-input-prefix,
+  .ant-input {
+    background-color: transparent;
+  }
+}
+
+.ant-modal-wrap {
+  .ant-modal-content {
+    .ant-modal-close {
+      color: #a8a8a8;
+
+      &:hover {
+        background-color: transparent;
+        color: #6e6e6e;
+      }
+    }
+  }
+}
+
+.generic-table {
+  .ant-table-content {
+    .ant-table-tbody {
+      tr {
+        .item_delete_btn {
+          padding: 10px !important;
+        }
+      }
+    }
+  }
+}
+/*====================================
+    Tax and Discount Modal Style
+  ====================================*/
+.generic-table.tax_table .ant-table-thead .ant-table-cell {
+  &:nth-of-type(1) {
+    width: 285px;
+  }
+
+  &:nth-of-type(2) {
+    width: 180px;
+  }
+
+  &:nth-of-type(3) {
+    width: 112px;
+  }
+
+  &:nth-of-type(4) {
+    width: 125px;
+  }
+
+  &:nth-of-type(5) {
+    width: 120px;
+  }
+}
+
+.generic-table.tax_table .ant-table-tbody .estimate_tax_detail {
+  display: -webkit-box;
+  word-break: break-word;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.total-tax-and-discount {
+  display: flex;
+  align-items: center;
+
+  label {
+    &:nth-of-type(1) {
+      width: 270px;
+    }
+
+    &:nth-of-type(2) {
+      @extend .text-right;
+      width: 172px;
+    }
+
+    &:nth-of-type(3) {
+      @extend .text-right;
+      width: 202px;
+    }
+
+    &:nth-of-type(4) {
+      @extend .text-right;
+      width: 130px;
+    }
+
+    &:nth-of-type(5) {
+      @extend .text-right;
+      flex: 1;
+    }
+  }
+}
+
+%no_border {
+  border-color: transparent;
+  background-color: transparent;
+}
+
+%hover_border {
+  border-color: #2580e8;
+}
+
+.estimate-table.generic-table {
+  table {
+    .ant-table-tbody {
+      tr {
+        .product_table_empty_td {
+          .no-border {
+            .ant-select-selector {
+              &:first-child {
+                padding: 0;
+              }
+            }
+          }
+
+          &:first-child {
+            padding-left: 0px !important;
+          }
+        }
+      }
+
+      .ant-avatar-lg {
+        flex-shrink: 0;
+      }
+
+      .estimate_discount_field {
+        border: 1px solid #e2e2e2;
+        border-radius: 2px;
+        height: 40px;
+
+        .discount_field,
+        .adjustment_box {
+          border: none;
+          height: 38px;
+        }
+
+        .discount_dropdown .ant-select-selector {
+          border: none;
+          height: 38px;
+        }
+
+        &:focus-within {
+          border-color: var(--color-0061DD);
+        }
+      }
+    }
+  }
+}
+
+.estimate_product_listing .no-border {
+  .ant-select-selector {
+    @extend %no_border;
+  }
+
+  &.ant-input-number {
+    @extend %no_border;
+
+    &:hover {
+      @extend %hover_border;
+    }
+  }
+
+  &.ant-input {
+    @extend %no_border;
+
+    &:hover {
+      @extend %hover_border;
+    }
+  }
+
+  &.ant-input-number-affix-wrapper {
+    @extend %no_border;
+
+    &:hover {
+      @extend %hover_border;
+    }
+  }
+}
+.downLoad {
+  color: #757171;
+  cursor: pointer;
+}
+
+.generic-dropdown-icon.ant-btn-default:disabled {
+  background-color: var(--color-eee) !important;
+}
+
+.disabled-svg {
+  cursor: not-allowed;
+  background-color: var(--color-eee);
+  border-left: none;
+  padding: 5px 7px;
+
+  img {
+    filter: opacity(0.2) !important;
+  }
+
+  &.ant-dropdown-trigger {
+    border-right: none !important;
+  }
+
+  img {
+    filter: brightness(0);
+  }
+}
+
+.generic-dropdown-icon.bg-blue {
+  background-color: var(--color-0061DD);
+}
+
+.pl-2 {
+  padding-left: 2px;
+}
+
+.adjust-filter-main.width_332px {
+  max-width: 100%;
+}

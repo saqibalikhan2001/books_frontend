@@ -1,0 +1,71 @@
+@mixin clearfix() {
+	&::after {
+		content: "";
+		clear: both;
+		display: table;
+	}
+}
+@mixin borderRadius($pixel) {
+    border-radius: $pixel !important;
+  }
+@mixin config-bg-colors($prefix, $bg-color-...) {
+	@each $i in $bg-color- {
+		.#{$prefix}#{nth($i, 1)} {
+			background: nth($i, 2);
+		}
+	}
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {
+        @content;
+    }
+    &:-moz-placeholder {
+        @content;
+    }
+    &::-moz-placeholder { 
+        @content;
+    }
+    &:-ms-input-placeholder {
+        @content;
+    }
+}
+
+@mixin lineClamp($line){
+    -webkit-line-clamp: $line;
+}
+
+/*======================================
+    Hover and Active State
+======================================*/
+@mixin transitionMouse($base,$hover, $active){
+    color:$base ;
+    cursor: pointer;
+    &:hover{
+        color: $hover;
+        text-decoration: underline;
+    }
+    &:active{
+        color: $active;
+        text-decoration: underline;
+    }
+}
+
+/*=========================================
+    Global ScrollBar Styling
+=========================================*/
+@mixin genericScrollBar(){
+    &::-webkit-scrollbar-track {
+        background-color: #dedede;
+        border-radius: 20px;
+      }
+      &::-webkit-scrollbar {
+        width: 9px;
+        height: 8px;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #bcbcbc;
+        border-radius: 10px;
+      }
+
+}

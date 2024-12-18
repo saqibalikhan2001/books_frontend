@@ -1,0 +1,26 @@
+// ............................................ journal payment modal ............................
+
+.align-top-values--payments // used on top
+{
+    width: 100%; 
+    .__customer_info{
+        margin: 5px 0 10px;
+        .info_detail{
+            width: 150px;
+        }
+        .aligned-dots
+        {
+          margin-right: 15px;
+          font-weight: bold;
+          opacity: .6;
+        }
+    }
+}
+// ...........common style global.........................
+
+.product_row {
+    .no-cap {
+      text-transform: unset !important;
+    }
+  }
+// ...................................

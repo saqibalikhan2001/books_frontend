@@ -1,0 +1,959 @@
+@import "../default/mixins";
+
+%image_dimension {
+  width: 150px;
+  height: 150px;
+  margin-right: 40px;
+}
+.__generic_content_side.dashboard--details {
+  height: calc(100vh - 160px);
+}
+.error-text{
+  input{
+    color: #ff4d4f !important;
+  }
+}
+._estimate_detial_page,._invoice_detial_page,._bills_detial_page,._bill_payment_detial_page,._credit_note_detial_page,._payment_received_detial_page {
+  max-width: 1100px;
+  margin: 0 auto;
+
+  &.gap-adj {
+    padding: 0;
+  }
+
+  &._payment_received_page {
+    max-width: 1110px;
+    padding: 0 5px;
+  }
+
+  h4 {
+    color: var(--color-1616);
+    font-weight: 500;
+  }
+
+  .ant-image {
+    @extend %image_dimension;
+
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      border: .5px solid #f9f6f6;
+    }
+  }
+
+  /*================================================
+    Rest User Default Image For Estimate and Invoice
+  ==================================================*/
+  .user_default_image {
+    @extend %image_dimension;
+
+    svg {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+    }
+  }
+}
+
+._status_label {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  color: var(--color-1616);
+}
+.__status_dropdown {
+  .ant-select-selector {
+    height: 100% !important;
+  }
+
+  .ant-select .ant-select-arrow {
+    margin-top: -3px;
+  }
+
+  .ant-select-selection-item {
+    line-height: 34px !important;
+  }
+
+  &:hover .ant-select-selector {
+    border-color: var(--color-e2e2e2) !important;
+    background-color: var(--color-f5f5) !important;
+  }
+}
+
+.__header_dropdown {
+  @extend .h-36px;
+  .ant-dropdown-trigger{
+    .generic-dropdown-icon{
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &::before{
+      height: 100% !important;
+      top: 0 !important;
+    }
+    &:hover .generic-dropdown-icon{
+      background-color: #2580e8;
+    }
+  }
+  .ant-btn {
+    height: 100%;
+    background-color: var(--color-0061DD);
+    color: var(--color-white);
+    box-shadow: none;
+    border: none;
+
+    +.ant-btn {
+      padding: 0;
+
+      &.ant-btn-icon-only>span {
+        transform: scale(1);
+      }
+    }
+
+    &.ant-btn-icon-only {
+      border-radius: 0 3px 3px 0;
+      overflow: hidden;
+    }
+
+    &.ant-dropdown-trigger {
+      .generic-dropdown img {
+        transition: transform .2s;
+      }
+
+      &.ant-dropdown-open img {
+        transform: rotate(180deg);
+      }
+
+    }
+  }
+}
+
+.__customer_image {
+  width: 150px;
+  height: 150px;
+  margin-right: 40px;
+
+  .ant-image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .ant-image-img {
+    @extend .w-100;
+    @extend .h-100;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+}
+
+.__estimate_detials,.__invoice_detials,.__bill_detials,.__bill_payment_detials,.__credit_note_detials,.__payment_received_detials {
+  flex: 1;
+
+  .__general_receipt {
+    justify-content: flex-end;
+
+    label {
+      cursor: pointer;
+    }
+  }
+}
+.__customer_info {
+  display: flex;
+  align-items:baseline;
+  position: relative;
+  > img {
+    position: relative;
+    top: 3px;
+  }
+
+  .fw-md{
+    flex-shrink: 0;
+  }
+  .ref_title {
+    margin-left: 5px;
+  }
+
+  span {
+    color: var(--color-1616);
+    word-break: break-word;
+    line-height: var(--line-height-18);
+  }
+
+  svg {
+    @extend .mr-10;
+  }
+
+  .ant-statistic-content {
+    font-size: var(--font-size-b3);
+    color: var(--color-1616);
+  }
+
+  h5 {
+    @extend .mb-0;
+    margin-right: 8px;
+    color: var(--color-1616);
+ 
+  }
+
+  .ant-statistic {
+    flex: 1;
+    text-align: right;
+  }
+}
+.status_selection,.dropdown_btn_list{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.__generic_content_side {
+  height: calc(100vh - 130px);
+  overflow-y: auto;
+  padding-top: 30px;
+  padding-right: 30px;
+  &.vh-0{
+    height: auto;
+    overflow: unset;
+  }
+  &.pr-0{
+    padding-right: 0 !important;
+  }
+  &.pt-20{
+    padding-top: 20px;
+  }
+  &.email-template-standalone{
+    background-color: #fff;
+    height: calc(100vh - 70px);
+  }
+}
+
+.pending_invoice_modal {
+  .ant-modal-header {
+    .ant-modal-title {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      margin-inline-end: 24px;
+    }
+  }
+  .main_wrapper{
+    ._container {
+      min-height: auto;
+      padding-block: 0;
+    }
+    
+  }
+  &.pending-invoice .ant-modal-content{
+    min-height: 470px;
+  }
+}
+
+.__details_tab_container {
+ table {
+    @extend .mb-0;
+
+    .ant-table-tbody {
+      .ant-table-cell-ellipsis {
+        vertical-align: top;
+      }
+    }
+  }
+}
+.credit-note-picker {
+  z-index: 999;
+}
+.__items-details_container.__item_details_tab_container{
+  .ant-tabs-content-holder .ant-tabs-tabpane {
+    padding-left: 0;
+  }
+  &.px-0  .ant-tabs-content-holder .ant-tabs-tabpane {
+    padding-right: 0;
+  }
+} 
+
+._items_term_and_conditions {
+  flex: 0 0 36%;
+  .product_note{
+    h5{
+      font-weight: 600;
+    }
+  }
+
+  ._btn {
+    color: var(--color-0061DD);
+    padding: 0;
+
+    svg {
+      margin-right: 5px;
+    }
+
+    &:hover {
+      color: var(--color-0061DD);
+    }
+  }
+}
+
+.__product_image {
+  display: flex;
+  align-items: center;
+
+  .ant-image {
+    width: 54px;
+    height: 54px;
+    margin-right: 7px;
+    flex-shrink: 0;
+    align-self: flex-start;
+
+    .ant-image-img {
+      @extend .w-100;
+      @extend .h-100;
+      border-radius: 3px;
+      border: 1px solid var(--color-E5E5E5);
+      object-fit: cover;
+    }
+  }
+}
+
+._history_tab {
+  display: block;
+  max-width: 65%;
+
+  .flex_root {
+    flex: 1;
+  }
+}
+
+.w-200 {
+  min-width: 200px;
+}
+
+.w-102 {
+  min-width: 102px;
+}
+
+.fw-md {
+  font-weight: var(--p-medium);
+ }
+
+.__product_info {
+  ._display_name {
+    line-height: 19px;
+
+  }
+}
+
+._display_name {
+  color: var(--color-0061DD) !important;
+  @extend .text-left;
+
+}
+
+.fw-bold {
+  font-weight: var(--p-black);
+}
+
+.bg-white {
+  background-color: #fff;
+}
+
+.text {
+  color: var(--color-1616);
+  display: block;
+  line-height: 18px;
+}
+
+.__convert_invoice_btn {
+  .ant-btn-primary {
+    &:nth-child(2) {
+      span {
+        svg {
+          width: 14px;
+          height: 10px;
+        }
+      }
+    }
+  }
+
+  .estimates-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 25px;
+    padding: 5px;
+    margin: 0 auto;
+  }
+}
+
+._item_details_summary_sec {
+  width: auto;
+  min-width: 300px;
+  max-width: 100%;
+  margin-right: 10px;
+  padding:0 15px;
+  .__customer_info {
+    &.no-border{
+      border-bottom: none;
+    }
+    h5 {
+      padding-right: 10px;
+    
+      word-break: break-word;
+      white-space: normal;
+      text-align: right;
+      font-weight: bold;
+      &.fw-regular{
+        font-weight: 400;
+      }
+    }
+
+    .ant-statistic {
+      text-align: right;
+      word-break: break-word;
+      white-space: normal;
+    }
+    &.bottom-line{
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0 !important;
+      margin-top: 25px;
+      position: relative;
+      &::after{
+        content:"";
+        display:block;
+        border-bottom:1px solid #ccc;
+        width: 100%;
+        position: absolute;
+        bottom: -5px;
+    }
+    }
+    &.border-bottom{
+      border-bottom:1px solid #ccc;
+      padding-bottom: 10px;
+    }
+  }
+}
+
+.__general_details_page_left {
+  flex: 0 0 62.4%;
+}
+
+.estimates_names,.customer_detail_names {
+  svg {
+    flex: 0 0 2.5%;
+    width: 100%;
+  }
+}
+
+.__general_details_page_right {
+  padding-left: 35px;
+
+  &.credit_details--alignment {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      max-width: 390px;
+    .__customer_info {
+      line-height: 17px;
+
+      span {
+        width: 50%;
+        &:first-child {
+          font-weight: 600;
+          width: 136px;
+          text-align: left;
+
+        }
+      }
+    }
+  }
+}
+
+.estimates_reference svg,
+.__customer_info svg {
+  margin-right: 5px;
+  position: relative;
+  flex-shrink: 0;
+}
+
+._display_name._customer_info_name {
+  max-width: 400px;
+  color: var(--color-0061DD);
+  display: inline-block;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    color: var(--color-007AFF);
+  }
+
+  &:active {
+    color: #0050A8;
+  }
+}
+
+.profile_display_name {
+  color: var(--color-0061DD) !important;
+}
+
+.product_sku_detail {
+  color: #6e6e6e;
+  font-size: 13px;
+}
+
+.content_side.estimates-content,.content_side.invoice-content,.content_side.credit-note-content,.content_side.payment-received-content {
+  overflow-y: hidden;
+}
+
+._payment_received_page .estimates_reference svg,
+._payment_received_page .__customer_info svg {
+  left: -1px;
+
+  &.customer_icon {
+    align-self: flex-start;
+  }
+}
+
+.mb_18 {
+  margin-bottom: 18px;
+}
+
+.ref_no {
+  margin-left: 5px;
+}
+
+.lh-18 {
+  line-height: var(--line-height-18);
+}
+
+.lh-17 {
+  line-height: var(--line-height-17);
+}
+
+//...........................................................................................................
+
+.__item_details_tab_container {
+  .ant-tabs .ant-tabs-tab+.ant-tabs-tab {
+    margin: 0 !important;
+  }
+}
+
+.rotate_180 {
+  transform: rotateZ(180deg);
+}
+
+.add_new_btn {
+  margin-top: 4px;
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.__items_details_header .ant-page-header-heading-extra .btn-edit._detailpage_edit_btn .ant-btn-compact-first-item {
+  padding: 0;
+
+  .base-style {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 14px;
+    color: var(--color-1616);
+    cursor: pointer;
+
+    &.no-edit {
+      cursor: not-allowed;
+    }
+  }
+}
+.invoices-tbl,
+.__estimates_tab_container {
+  .ant-table-cell {
+    &[title="Discount"] {
+      @extend .text-right
+    }
+}
+}
+
+.generic-table.detail_item_table {
+  &.ant-table-wrapper {
+    .ant-table-cell-ellipsis {
+      white-space: normal;
+      vertical-align: top;
+    }
+
+    table {
+      margin-bottom: 20px;
+
+      .ant-table-thead,.ant-table-tbody {
+        .ant-table-cell-ellipsis {
+          vertical-align: top;
+
+          &:last-child {
+            padding: 9px 16px !important;
+            text-align: right !important;
+          }
+        }
+
+      }
+
+      .ant-table-tbody tr .ant-table-cell:nth-child(odd):not(:last-child),
+      .ant-table-thead tr .ant-table-cell:nth-child(odd):not(:last-child) {
+        padding-right: 0;
+      }
+    }
+  }
+
+  .ant-statistic .ant-statistic-content .ant-statistic-content-value {
+    word-break: break-word;
+    color: var(--color-1616);
+   
+  }
+
+}
+.ant-statistic:has(.amount---fix) .ant-statistic-content .ant-statistic-content-value{
+  text-align: left;
+}
+
+.image_cell {
+  vertical-align: top;
+}
+
+.create_name {
+  color: var(--color-black);
+  line-height: 20px;
+  min-width: 75px;
+}
+
+.creator_role {
+  color: var(--color-dark-gray);
+  font-size: var(--font-size-b5);
+  line-height: 20px;
+
+}
+
+.txt-rgt {
+  text-align: right;
+}
+
+.clr {
+  color: #6e6e6e !important;
+}
+
+.__estimate__table__main {
+  .ant-table-wrapper {
+    .ant-table-content {
+      .ant-table-thead {
+        .ant-table-cell {
+          &:nth-child(4) {
+            text-align: left !important;
+          }
+
+          &:nth-child(6) {
+            text-align: right !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+.estimates-listing .no_sticky_table table thead th:nth-child(4),
+.estimates-listing .no_sticky_table table tbody td:nth-child(4) {
+  text-align: left !important;
+  justify-content: unset !important;
+}
+
+.pending-invoice {
+  .ant-table-cell {
+    &:not(:nth-child(1)) {
+      text-align: right;
+    }
+  }
+}
+
+.generic-table{
+  &.detail_item_table {
+    .ant-table-wrapper {
+      table {
+        tbody {
+          .ant-table-cell-ellipsis {
+            &:last-child {
+              padding: 12px 10px;
+  
+              .ant-statistic-content {
+                padding: 0 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+.receive-payment-checked {
+  .ant-input-affix-wrapper {
+    .ant-input {
+      color: #A8A8A8 !important;
+    }
+      .ant-input-prefix {
+      color: #A8A8A8 !important;
+    }
+  }
+}
+
+
+.align-right-info{
+  .__customer_info{
+    justify-content: flex-start;
+  }
+}
+
+
+
+/*================================
+    Pixel perfection
+================================*/
+.amount---fix{
+  .ant-statistic-content{
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+  .invoices-tbl{
+    .ant-table-container{
+      table{
+        .ant-table-thead{
+          .image_cell{
+            padding-left: 10px;
+          }
+          .qty_column,
+          .amount_column,
+          .discount_column
+          {
+            padding-right: 5px;
+          }
+          .tax_column{
+            padding-left: 5px;
+          }
+        }
+        .ant-table-tbody{
+          tr{
+            
+            .ant-table-cell{
+              padding: 12px 5px;
+            }
+            .tax_column{
+              color: #161616;
+            }
+            .image_cell{
+              padding-left: 10px;
+            }
+          }
+        }
+      }
+    }
+  }
+  .ant-table-tbody,
+  .ant-table-thead{
+    .discount_column{
+      padding-right: 16px !important;
+      .ant-statistic-content{
+        line-height: 18px;
+      }
+    }
+  }
+
+
+  .generic-table{
+    &.activity-tbl{
+      .ant-table-tbody {
+        tr{
+          &.ant-table-row {
+            .ant-table-cell{
+              padding: 2px 16px;
+              min-height: 45px;
+              height: 45px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .estimates-data {
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    
+  }
+  .__general_details_page_left {
+    .__customer_info{
+      ._display_name{
+        color: var(--color-1616) !important;
+      }
+    }
+  }
+
+
+
+.__invoices-details--main {
+  .generic-table {
+    table {
+      .ant-table-cell{
+        &:not(:last-child) {
+          width: 23.9%;
+        }
+      }
+    }
+  }
+}
+
+
+
+.__applied-invoices--tbl {
+  .ant-table {
+    .ant-table-container {
+      table{
+        
+        .ant-table-cell{
+          &:nth-child(3){
+            .ant-table-column-sorters{
+              .ant-table-column-title{
+                >div{
+                  justify-content: flex-end;
+                }
+              }
+            }
+          }
+          &:nth-child(4){
+            .ant-table-column-sorters{
+              .ant-table-column-title{
+                >div{
+                  justify-content: flex-end;
+                }
+              }
+            }
+          }
+
+          &:nth-child(3){
+            text-align: right;
+            > div{
+              justify-content: flex-end;
+            }
+          }
+          &:nth-child(4){
+            > div{
+              justify-content: flex-end;
+            }
+          }
+          &:nth-child(1),
+          &:nth-child(3),
+          &:nth-child(4)
+          &:nth-child(5)
+          {
+            width: 19.2%;
+          }
+          &:nth-child(2){
+            width: 18.2%;
+          }
+          &:nth-child(6){
+            width: 5%;
+        } 
+        }
+       
+      }
+    }
+  }
+} 
+.estimat_modal {
+  .table-container {
+    max-width: 100%;
+  }
+
+  .bill_box {
+    margin-right: 0;
+  }
+}
+
+.control--width{
+  width: 100%;
+}
+
+.__invoices-estimates--modal{
+  .ant-page-header-footer {
+    padding: 0 30px 20px;
+  }
+  .__items-details_container 
+  .ant-tabs-content-holder 
+  .ant-tabs-tabpane:not(:nth-of-type(4),
+   :nth-of-type(5),
+    :nth-of-type(6)) {
+    padding-right: 0;
+}
+.__items-details_container {
+  padding-inline: 0 !important;
+}
+.unit-badge {
+  span{
+    white-space: nowrap;
+    font-size: 12px;
+  }
+}
+._estimate_detial_page{
+  padding: 0 ;
+}
+}
+
+.generic_modal_style{
+  .popup--spacing {
+    .generic_modal {
+      padding-inline: 30px;
+    }
+  }
+  .product_row{
+    margin-bottom: 8px !important;
+  }
+}
+.create_invoice_modal{
+  .estimate-table{
+    .generic-table {
+      table {
+        .ant-table-tbody {
+          tr {
+            .ant-table-cell {
+              .ant-select{
+                width: 100% !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.create_invoice_modal{
+  .generic-table {
+    table {
+      .ant-table-tbody {
+        tr {
+          .ant-table-cell {
+            .ant-statistic{
+              word-break: break-word;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.invoice-credit--applied.generic-table table .ant-table-cell:not(:last-child){
+  width: 31%;
+}

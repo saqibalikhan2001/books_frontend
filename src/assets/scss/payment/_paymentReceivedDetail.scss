@@ -1,0 +1,223 @@
+._payment_received_page{
+    .bill_box {
+        margin-right: 0;
+       .final_payment{
+           width: auto;
+           max-width: 100%;
+           padding-right: 15px;
+       }
+       .__general_details_page_right {
+           display: flex;
+            flex: 0 0 71.75%;
+            transform: unset;
+            padding-left: 0;
+            width: 100%;
+            justify-content: space-between;
+            .amount-details{
+               padding-right: 15px;
+               .min_width{
+                    text-align: right;
+               }
+            }
+            ._items_term_and_conditions{
+               flex: 0 0 50.75%;
+               position: relative;
+               top: -9px;
+               .product-details-right .ant-typography{
+                   margin-bottom: 0;
+               }
+            }
+       }
+       .mb-14{
+        margin-bottom: 14px;
+       }
+   }
+.__items-details_container{
+    padding-right: 0;
+}
+.ant-divider-horizontal{
+    margin: 20px 0 18px;
+}
+}
+.ant-typography.fw-bold{
+    font-weight: var(--p-bold);
+}
+.ant-typography.fw-black{
+    font-weight: var(--p-bold);
+}
+
+.payment_received_detail{
+    display: flex;
+    justify-content: space-between;
+    .__customer_info{
+        align-items: center;
+    }
+    .product-details-right {
+        padding-left: 16px;
+        min-width: 30%;
+        .__customer_info .ant-typography{
+            color: var(--color-black);
+            line-height: 20px;
+            min-width: 170px;
+        }
+        .__customer_info{
+            &:first-child{
+                align-items: flex-start;
+                .padding-block {
+                    padding-top: 0;
+                }
+            }
+        }
+        .ant-statistic-content{
+            color: var(--color-1616);
+            line-height: 20px;
+           
+        }
+    }
+    .payment-terms-box{
+        max-width: 400px;
+        width: 100%;
+        margin-left: 10px;
+        .terms-condition-heading{
+            font-weight: var(--p-semi-bold);
+            font-size: 14px;
+            color: var(--color-dark-gray);
+            margin-bottom: 8px;
+        }
+        .term_condition_detail{
+            word-break: break-all;
+        }
+    }
+}
+.border-block{
+    border-block-start: 1px solid var(--color-E5E5E5);
+    border-block-end: 2px solid var(--color-E5E5E5);
+   
+}
+.padding-block{
+    padding-block: 7px;
+}
+
+
+
+/*====================================
+    Linked Invoices
+====================================*/
+.total-charges.product_row  h5{
+font-weight: var(--p-bold);
+color: var(--color-black);
+line-height: 18px;
+}
+.link-invoices table{
+    margin-bottom: 20px;
+}
+.link-invoices{
+    .ant-table-cell, span{
+        color: #000000;
+    }
+}
+
+/*====================================
+    Payment Listing Details 
+====================================*/
+.my-custom-table .product-title{
+    width: 100%;
+    .payment-info{
+        // margin-bottom: 4px;
+        width: 100%;
+        .customer_title{
+            color: var(--color-1616);
+            max-width: 130px;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            padding-right: 5px;
+        }
+        .name{
+            color: var(--color-1616);
+            line-height: 19px;
+            width: 50%;
+        }
+        .currency{
+            color: var(--color-black);
+            line-height: var(--line-height-18);
+        }
+    }
+} 
+.product-title{
+    .customer_title{
+        color: #000;
+    }
+}
+.payment-details-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .payment-received-info{
+        display: flex;
+        justify-content: space-between;
+        width: 55%;
+        &.w-100{
+            width: 100%;
+        }
+        &.w-67{
+            width: 67%;
+        }
+    }
+    .payment-link{
+        color: var(--color-0061DD) !important;
+        line-height: var(--line-height-18);
+        flex-shrink: 0;
+        padding-right: 5px;
+        max-width: 82px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        &:hover{
+            color: var( --color-007AFF);
+            text-decoration: underline;
+        }
+        &:active{
+            color: var(--color-active);
+        }
+    }
+    .payment-received-date{
+        color: var(--color-dark-gray) !important;
+        line-height: 19px;  
+        flex-shrink: 0;
+
+    }
+}
+.my-custom-table #wrapper.payment-table{
+    .sticky_table tbody tr td:nth-of-type(3) .ant-space{
+        margin-left: 8px;
+    } 
+    .sticky_table tbody tr td:nth-of-type(2){
+       padding: 4px 0;
+    } 
+    tfoot tr td{
+        min-height: unset;
+    }
+    .action-ellipses{
+       align-self: flex-start;
+    }
+}
+.__items_details_header.payment_received_header .ant-page-header-heading-title{
+    margin-inline-end: 10px;
+}
+
+/*====================================
+    Payment Details 
+====================================*/
+.payment--receipt__memo {
+    flex: 0 0 36.5%;
+    position: relative;
+    top: -5px;
+    ._items_term_and_conditions{
+        flex: 1;
+    }
+}
+.transaction-subtabs .ant-table-thead
+.right-align_amount .ant-table-column-sorters .ant-table-column-title > div{
+    justify-content: flex-end;
+}

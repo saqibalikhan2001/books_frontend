@@ -1,0 +1,59 @@
+.aging-sumary_report--fixer {
+    table {
+        thead{
+            th{
+                white-space: nowrap;
+            }
+        }
+        tbody{
+            td{
+                &:not(:nth-child(1)):not(:nth-child(2)){
+                    white-space: nowrap;
+                }
+            }
+        }
+    }
+}
+
+// .............. stand-alone email style hirerachy ...............................
+.email--template-wrapper {
+
+    background-color: #fff;
+    height: calc(100vh - 70px);
+    .send-email{
+        text-align: right;
+    width: 346px;
+    }
+}
+
+// ............................REPORTS CUSTOMER BALANCE MODAL..........................................................................
+
+.reports--refund-modal {
+    .generic_modal{
+        padding: 0 25px !important;
+    }
+    .ant-modal-content{
+       
+        height: 375px !important;
+
+        table {
+            box-shadow: 0 0 0.5px 0.5px rgba(0, 0, 0, 0.1);
+        .ant-table-cell {
+            .ant-empty-normal {
+                height: 178px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+    }
+        
+        .balance--badges {
+            display: inline-block;
+        }
+        .data-list tbody td {
+            text-transform:capitalize;
+            }
+        
+    }
+}

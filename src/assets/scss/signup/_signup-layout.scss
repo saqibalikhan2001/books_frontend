@@ -1,0 +1,356 @@
+.authwrapper {
+  background-color: var(--color-f5f5);
+}
+.authcontainer {
+  margin: 0 auto;
+  max-width: 460px;
+  min-height: 100vh;
+  @extend .d-flex;
+  flex-direction: column;
+
+  .signup-logo {
+    margin: 84px 0 70px;
+  }
+
+  .signup-form-heading {
+    @extend .mb-20;
+    line-height: var(--line-height-17);
+    font-weight: normal;
+    font-size: var(--font-size-b1);
+    color: var(--color-1616);
+    margin-top: 10px;
+    margin-top: 0;
+  }
+}
+
+.stepscontent {
+  max-width: 450px;
+  background-color: var(--color-fff);
+  padding: 30px 25px;
+
+  .signup-upload-wrapper {
+    border: 2px dashed var(--color-e2e2e2);
+    padding: 10px;
+    text-align: center;
+    @include borderRadius(3px);
+    .loader-default-img {
+      @extend .d-flex-all;
+      flex-direction: column;
+       img {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto 10px auto;
+        object-fit: cover;
+      }
+      .ant-progress-bg{
+        background-color: #1677ff !important;
+      }
+    }
+    .upload-hint {
+      p {
+        font-size: var(--font-size-b3);
+        @extend .mb-0;
+      }
+    }
+
+    .img-format-hint {
+      font-size: var(--font-size-b4) !important;
+    }
+  }
+
+}
+.footer_area{
+  .ant-space-item{
+    .ant-divider{
+      margin: 0 3px;
+    }
+  }
+}
+.loading_block{
+  height: 50dvh;
+  margin: 0 auto;
+
+  .center_text {
+    text-align: center;
+
+    .final_text {
+      font-size: var(--font-size-b1);
+      color: var(--color-1616);
+      margin-bottom: 8px;
+    }
+
+    .warning_text {
+      color: #B2001E;
+      @extend .mb-30;
+      display: block;
+
+    }
+  }
+}
+
+.form-progress-bar {
+  line-height: 0;
+  margin-bottom: 26px;
+}
+
+.stepslabel {
+  font-family: "IBM Plex Sans";
+  font-weight: var(--p-semi-bold);
+  font-size: var(--font-size-b4);
+}
+
+.footertext {
+  font-family: "IBM Plex Sans";
+  font-weight: var(--p-semi-bold);
+  ;
+  font-size: 12px;
+  text-align: left;
+  color: var(--color-1616);
+}
+
+.formheading {
+  font-family: "IBM Plex Sans";
+  font-size: var(--font-size-b1);
+  line-height: var(--line-height-17);
+  color: var(--color-1616);
+}
+
+.bussiness_setup_sec {
+  display: flex;
+  position: relative;
+
+  .tax_tooltip {
+    position: absolute;
+    right: -19px;
+    top: 23px;
+  }
+}
+
+.bussiness_setup_sec>.ant-space-item:first-child {
+  flex: 1;
+}
+
+.bussiness_setup_widget {
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 2px;
+  display: flex;
+  flex: 1;
+  margin-bottom: 10px;
+
+  .business_type {
+    padding: 10px;
+    flex: 1;
+
+    .business_title {
+      margin-bottom: 0;
+      line-height: 18px;
+      color: var(--color-1616);
+      font-weight: var(--p-bold);
+    }
+
+    ._type {
+      font-size: 12px;
+      margin-bottom: 0;
+    }
+  }
+
+}
+
+.bussiness_setup_widget_active {
+  background: #F2F7FE;
+  border-color: #0061DD;
+}
+
+.bussiness_setup_widget>.ant-space-item {
+  width: 100%;
+  // padding: 18px;
+}
+
+.upload-wrapper-signup {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+
+  .circle_image {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+
+    > :not(.anticon),
+    .ant-image {
+      height: 100%;
+      width: 100%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .close_circle {
+      position: absolute;
+      right: 0;
+      top: -10px;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background-color: #f5f5f5;
+      box-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9;
+      transition:.4s ease;
+      transform: scale(1.0);
+      cursor: pointer;
+      &:hover {
+        background-color: #f9f5f5;
+        transition: .5s ease-out;
+        transform: scale(1.2);
+    }
+    }
+
+    .crossIcon {
+      transform: scale(1.5);
+      fill: #000;
+    }
+  }
+  .close_btn{
+    padding: 0px 8px;
+    font-size: 16px;
+    color: #1677ff;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+.__register_organization {
+  .custom-layout1 {
+    height: 100vh;
+    scrollbar-width:thin; /* width of the scrollbar */
+    scrollbar-color: #888 #f1f1f1; /* color of the thumb and track */
+    scrollbar-base-color: #f1f1f1;
+    &::-webkit-scrollbar {
+      width: 8px;
+      border-radius: 5px;
+      scrollbar-width:thin;
+    }
+    &::-webkit-scrollbar-thumb{
+      border-radius: 5px;
+      &:hover{
+        background-color: #595757;
+      }
+
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #f1f1f1; /* color of the track */
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background-color: #888; /* color of the thumb */
+      border-radius: 5px; /* roundness of the thumb */
+      &:hover{
+        background-color: #595757;
+      }
+    }
+    
+    /* For Microsoft Edge and Internet Explorer */
+    &::-ms-scrollbar {
+      scrollbar-width:thin; /* width of the scrollbar */
+    }
+    
+    &::-ms-scrollbar-track {
+      background-color: #f1f1f1; /* color of the track */
+    }
+    
+    &::-ms-scrollbar-thumb {
+      background-color: #888; /* color of the thumb */
+      border-radius: 5px;
+       /* roundness of the thumb */
+       &:hover{
+        background-color: #595757;
+      }
+    }
+  }
+}
+
+
+
+
+// =================================
+// ------SIGN UP FORM START--------
+// =================================
+.sign_up_form{
+  .ant-form{
+    .ant-space-item{
+      .ant-form-item-label{
+        padding-bottom: 0;
+        .form--label_style{
+          line-height: 14px;
+        }
+      }
+      .input_field{
+        margin-bottom: 18px;
+      }
+      .ant-radio-group {
+        .ant-radio-wrapper{
+          .ant-radio-inner {
+            border-color: #999999;
+          }
+          &:hover{
+            .ant-radio-inner {
+              border-color: #999999;
+            }
+          } 
+        }
+      }
+    }
+    .form_progress {
+      margin-bottom: 30px;
+      &:first-child {
+        .ant-space-item {
+          line-height: 10px;
+        }
+      }
+      .upload_logo{
+        label{
+          color: #161616;
+          margin-bottom: 5px;
+        }
+        .ant-form-item-row{
+          .ant-form-item-control{
+            .ant-form-item-control-input-content{
+              .signup-upload-wrapper{
+                .upload-hint{
+                  p{                    
+                    &:first-child{
+                      line-height: 21px;
+                    }
+                    &:nth-child(2){
+                      line-height: 15px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+// =================================
+// ------SIGN UP FORM END--------
+// =================================

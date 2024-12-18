@@ -1,0 +1,194 @@
+.invite_user_form {
+  margin:10px auto 0 auto;
+  padding-inline: 22px;
+  .ant-form-item {
+    @extend .mb-0;
+  }
+  .input_field {
+    margin-bottom: 15px !important;
+    &:nth-of-type(3) {
+      margin-bottom: 30px !important;
+    }
+  }
+  .ant-form-item-label{
+    padding: unset;
+  }
+  h5 {
+    text-align: center;
+    @extend .mb-20;
+  }
+}
+.custom-listing-tbl {
+  table-layout: fixed;
+  margin-bottom: 7px;
+  thead{
+      tr{
+          th {
+              width:25%;
+          }
+      }
+  }
+  
+}
+.settings-sidebar-header {
+  .ant-drawer-header {
+    padding: 0;
+    border: 0;
+  }
+  .ant-drawer-body {
+  padding-top: 20px !important;
+  padding-right: 2px !important;
+  }
+  .organization-card-toggle {
+    .ant-card-body {
+      &:empty {
+        display: none;
+      }
+    }
+  }
+}
+//********************.____.********************************
+.extra-space-remove{
+  position: relative;
+  z-index: 4;
+  label{
+      margin: 0 !important;
+  }
+.ant-select , .ant-select-selection-search , input {
+  cursor: pointer;
+}
+
+} //******************** user & roles styling***************
+.flx-flow_setting{
+  .ant-row{
+    flex-flow: unset !important;
+    .ant-select-selection-search-input{
+      height: 40px !important;
+    }
+  }
+}
+
+/*=========================
+    organization sidebar  
+==========================*/
+
+.profileTopSec {
+  background-color: #F2F7FE;
+  padding: 20px 10px;
+  .orgImg {
+    border: 1px solid #E5E5E5;
+    margin-left: auto;
+    margin-right: auto;
+    img{
+      object-fit: cover;
+    }
+  }
+  .myAcc {
+    font-family: "IBM Plex Sans";
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    color: #0061dd;
+    &:hover {
+      color: #0061dd;
+      text-decoration: underline;
+    }
+  }
+  .signOut {
+    font-family: "IBM Plex Sans";
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    color: #cc0123;
+    &:hover {
+      color: #cc0123;
+      text-decoration: underline;
+    }
+  }
+}
+.myBussinessArea {
+  margin: 0 11px;
+  padding: 2px 0 10px;
+  border-bottom: 1px solid #E5E5E5;
+ .myBussinessRight {
+  gap: 20px;
+  .setting_filter {
+    filter: brightness(0) saturate(100%) invert(24%) sepia(85%) saturate(3088%) hue-rotate(203deg) brightness(89%) contrast(108%)
+  }
+  .bussiness_manage:hover{
+    .manageText {
+      color: #2580e8;
+      text-decoration: underline;
+    }
+    .setting_filter {
+      filter: brightness(0) saturate(100%) invert(33%) sepia(100%) saturate(845%) hue-rotate(183deg) brightness(111%) contrast(89%);
+    }
+  }
+ }
+  .busTitle {
+    font-family: "IBM Plex Sans";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 17px;
+    text-align: left;
+    color: #161616;
+  }
+  .manageText {
+    font-family: "IBM Plex Sans";
+    font-weight: normal;
+    font-size: 14px;
+    text-align: left;
+    color: #0061dd;
+    &:hover {
+      color: #0061dd;
+      text-decoration: underline;
+    }
+  }
+}
+
+.org-card-new {
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0;
+  border-color: #E5E5E5;
+  &:hover,.active{
+    box-shadow: none;
+    border-radius: 5px;
+    background: #a4c8ff;
+  }
+  .listItem {
+    padding: 15px;
+    .ant-list-item-meta-avatar {
+      margin-inline-end: 10px !important;
+    }
+    .avt-logo {
+      width: 50px;
+      height: 50px;
+
+    }
+    .card-sec {
+      .ant-typography{
+        font-family: "IBM Plex Sans";
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: left;
+        color: #161616;
+        margin-bottom: 10px;
+      }
+      .share-unshared {
+        border-radius: 3px;
+        font-size: 14px;
+        font-weight: normal;
+        border: none;
+        min-height: 24px;
+        line-height: 1.6;
+      }
+      .organization-badge{
+        background-color: #e8ffe5;
+        color: #0e7502;
+      }
+    }
+  }
+}

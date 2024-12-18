@@ -1,0 +1,378 @@
+
+.ant-modal-root:has(.generic_modal_style) .ant-modal-mask{
+  z-index: 1101
+}
+
+
+.generic_modal_style {
+.credit-note-modal .__items-details_container{  
+  padding-inline: 0;
+  .ant-tabs-content-holder .ant-tabs-tabpane{
+    padding-right: 0;
+    }
+}
+.payment-modal .__items-details_container{
+  padding-inline: 0;
+  .ant-tabs-content-holder .ant-tabs-tabpane{
+ padding-right: 0;
+ }
+}
+
+._payment_received_detial_page._payment_received_page{
+  padding: 0;
+}
+  &.ant-modal-wrap{
+    z-index: 1101;
+  }
+  .ant-modal-close{
+    top: 8px;
+  }
+  &.qty_adjustment_modal .ant-modal-content{
+      overflow-x: hidden;
+    overflow-y: auto;
+  }
+  .ant-modal-content {
+    padding: 0;
+    padding-bottom: 20px;
+    .ant-modal-header {
+      border-bottom: 1px solid var(--color-E5E5E5);
+      margin-bottom: 20px;
+      .ant-modal-title {
+        font-size: var(--font-size-b2);
+        color: var(--color-black);
+        font-weight: var(--p-bold);
+        padding: 10px 20px;
+        line-height: 20px;
+      }
+    }
+  }
+  .generic_modal {
+    padding: 0 20px;
+    .tax_table table{
+      margin-bottom: 0;
+    }
+    &.px-30{
+      padding: 0 30px;
+    }
+    &.get-space{
+      padding: 0 50px;
+    }
+    &.some_spacing {
+      padding: 15px 58px;
+      .ant-table-content {
+        table {
+          margin: 0;
+        }
+      }
+      .ant-table-wrapper {
+        .ant-table-footer {
+          border-bottom: 2px solid #e2e2e2;
+          border-radius: 0;
+        }
+      }
+    }
+    .flexbox .form_group {
+      .ant-form-item-label {
+        min-width: 100px;
+      }
+    }
+  }
+  .button_flexbox .ant-form-item {
+    @extend .mb-0;
+  }
+  .modal_search {
+    max-width: 495px;
+    height: 40px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+    * {
+      height: 100%;
+    }
+  }
+  .modal_image {
+    height: 54px;
+    width: 54px;
+    border: 1px solid var(--color-E5E5E5);
+    border-radius: 3px;
+  }
+  .custom_invoice_modal {
+    flex-wrap: nowrap;
+    position: relative;
+    .delete_tool {
+      position: absolute;
+      top: 7px;
+      right: -7px;
+      cursor: pointer
+    }
+    .Input_Num {
+      width: 100%;
+    }
+    .form-group{
+      .ant-input,.ant-input-number-input{
+       height: 40px;
+     }
+    }
+  }
+  .payment_term_form{
+    margin-bottom: 20px;
+    align-items: unset;
+    .form-group{
+      margin-bottom: 0;
+      flex: 1;
+      .ant-form-item-row{
+        display: flex;
+        flex-direction: column;
+        .ant-form-item-required{
+          height: 18px;
+          display: flex;
+          margin-bottom: 5px;
+          &::after{
+            content: none;
+          }
+          span{
+            margin-bottom: 0;
+          }
+        }
+        .ant-form-item-control{
+          flex: 1;
+        }
+
+      }
+    }
+  }
+  &.new_received_payment .ant-modal-content{
+    height: 595px;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  &.address_modal{
+    .ant-modal-content{
+     height: 578px;
+ 
+     .ant-modal-header{
+       margin-bottom: 15px;
+     }
+   }
+   &.h-635 .ant-modal-content{
+    height: 635px;
+  }
+  }
+  .__items-details_container{
+    padding-inline: 20px;
+    &.responsive-modal{
+      padding-inline:0;
+    }
+    &.px-0{
+      padding-inline: 0;
+    }
+  }
+  .__popup-actions {
+    justify-content: flex-end;
+}
+
+}
+
+.height-adjustment{
+  .ant-modal-content{
+   min-height: 530px;
+  }
+}
+#payement-received-form {
+  .form-row-container {
+    max-width: 920px;
+    width: 100%;
+    .flex-47 {
+      flex: 0 0 30%;
+      .ant-select-selector {
+        height: 40px;
+      }
+    }
+    .receive_payment_text_area {
+      width: 65%;
+      .notes-label label{
+        margin-bottom: 8px;
+      }
+    }
+    .payment_mode{
+      input{
+        //  height: 38px !important;
+         &:hover{
+           background-color: transparent;
+         }
+        }
+        .ant-select-selection-placeholder{
+          line-height: 38px;
+        }
+    }
+  }
+}
+.form_box
+  .ant-form-item
+  .ant-form-item-label
+  > label.ant-form-item-required:not(.ant-form-item-required-mark-optional)::before {
+  content: none;
+}
+.tax_modal .input_field {
+  .ant-form-item-control-input-content
+  .ant-input-affix-wrapper {
+    height: 40px;
+  }
+  .ant-input-group-wrapper
+  .ant-input-wrapper
+  .ant-input{
+    height: 40px;
+  }
+  &.input-40px .ant-input{
+    height: 40px;
+    
+  }
+  .ant-input-affix-wrapper{
+    .ant-input{
+      transition: none;
+      background-color: transparent;
+    }
+    &.ant-input-affix-wrapper-focused{
+      border-color: var(--color-0061DD);
+      background-color: #fff;
+    }
+  } 
+}
+
+._product-title{
+  font-size: 16px;
+  color: var(--color-black);
+  font-weight: var(--p-bold);
+}
+%comon_placeholder{
+  color: #999999!important;
+  font-size: 14px;
+  font-weight: 400;
+}
+.remove-extra--space{
+  input[type=text]{
+    padding-left: 10px;
+    &::placeholder{
+      @extend %comon_placeholder
+    }
+  }
+}
+#form_in_modal_description{
+  padding-left: 10px;
+  &::placeholder{
+    @extend %comon_placeholder
+  }
+}
+
+.adjust-tbl-main{
+  .ant-form-item .ant-form-item-label >label{
+    height: auto;
+  }
+}
+
+/*==========================================
+  Tax Modal Styling
+===========================================*/
+.generic_modal.tax_modal .ant-form-item
+ .ant-form-item-label{
+    padding: 0;
+   .ant-form-item-required::before{  
+    // content: "";
+    display: none;
+  }
+ }
+ .generic_modal.tax_modal{
+  .ant-form-item-margin-offset{
+    display: none;
+  }
+ }
+/*==========================================
+  Address Modal Styling
+===========================================*/
+.generic_modal.billing--address__modal{
+   .flexbox .form_group {
+     .ant-row{
+       display: block;
+       .ant-form-item-label{
+        text-align: left;
+        label{
+          height: auto;
+        }
+       }
+     }
+
+   }
+   &.px-30{
+    padding: 0 30px;
+   }
+}
+/*==========================================
+  Filter PopOver Styling
+===========================================*/
+._generic_popupover_main
+.item--filter__popover .ant-row{
+  display: block;
+  .ant-form-item-no-colon{
+    margin-bottom: 0;
+    height: auto;
+  }
+}
+
+
+
+.qty_adjustment_modal{
+  .quantity_adjustment{
+    text-overflow: unset;
+  }
+  .ant-table-cell-row-hover{
+    background: transparent !important;
+  }
+}
+
+
+
+.create-account-modal{
+  .account_category_list{
+    .ant-radio-wrapper{
+      span{
+        &:last-child{
+          padding-right: 0;
+        }
+      }
+    }
+  }
+}
+
+
+// <<<<<<<<<<<<<<<<<  ADD ITEM Modal sku Popup alignment,s adjustments >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+.add-new-item--modal{
+  .__sku_settings{
+    right: -3px !important;
+    top:44px !important;
+    .ant-popover-arrow {
+      right: -2px !important;
+  }
+  }
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< ADJUST QUANTITY >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> */
+
+.adjust-according-space {
+    transform: translateX(-15px);
+}
+
+// -----------------------------
+/// MANAGE BUSINESS LLC MODAL///
+//------------------------------
+
+
+.business_modal {
+  .ant-modal-body{
+    padding: 0 20px 20px 0;
+    .bussiness_setup_sec{
+      .tax_tooltip{
+        right: -30px;
+      }
+    }
+  }
+}

@@ -1,0 +1,141 @@
+.credit-note-form{
+    .ant-drawer{
+        .ant-drawer-mask{
+       background-color: rgba(#eee, 0.71);
+       }
+       .ant-drawer-content-wrapper{
+        width: 369px !important;
+        .ant-drawer-body .invoices-list{
+            height: calc(100vh - 128px);
+            overflow:hidden auto;
+            padding-right: 10px;
+        }
+        &::before{
+            content: "";
+            position: absolute;
+            left: -40px;
+            background-image: url('https://s3-us-west-2.amazonaws.com/ims-development/static/media/sidenav_expand.svg');
+            background-repeat: no-repeat;
+            width: 40px;
+            height: 26px;
+            background-color: #fff;
+            border-radius:20px 0 0 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-position: center;
+            cursor: pointer;
+            &:hover{
+                background-color: #F5F5F5;
+            }
+        }
+        .ant-drawer-content .ant-drawer-wrapper-body{
+        .ant-drawer-header{
+            padding: 12px 10px;
+            border-color: var(--color-E5E5E5);
+            .ant-drawer-title{
+                color: var(--color-1616);
+                line-height: var(--line-height-17);
+                font-weight: var(--p-bold);
+            }
+        }
+        .ant-drawer-body{
+            padding: 12px 0px 12px 10px;
+            .filter{
+                display: block;
+                font-size:var(--font-size-b3) ;
+                line-height:var(--line-height-18) ; 
+                color:var(--color-1616);
+                margin-bottom: 10px;
+            }
+            .ant-select{
+                width: 100%;
+                margin-bottom: 8px;
+                .ant-select-selector{
+                    border-color: var(--color-e2e2e2);
+                    border-radius: 3px;
+    
+                }
+            }
+            .invoice-box{
+                padding: 15px;
+                border:1px solid var(--color-dark-gray);
+                border-radius: 3px;
+                position: relative;
+                .ant-typography.total-payment{
+                    color: var(--color-1616);
+                    line-height: 19px;
+                    margin-bottom: 5px;
+                    font-weight: var(--p-bold);
+                }
+                .payment-paid,.payment-date{
+                    color: var(--color-dark-gray);
+                    font-size: var(--font-size-b4);
+                    line-height: 19px;
+                    display: block;
+                    margin-bottom: 3px;
+                }
+                .ant-typography.invoice-no{
+                    font-size: var(--font-size-b3);
+                    color: var(--color-dark-gray);
+                    line-height: 19px;
+                    font-weight: var(--p-medium);
+                    margin-bottom: 2px;
+                }
+                .payment-date{
+                    margin-bottom: 16px;
+                }
+                .ant-form-item{
+                    margin-bottom: 0;
+                }
+                &:not(:last-child){
+                    margin-bottom: 10px;
+                }
+                .selected-invoice{
+                    position: absolute;
+                    top: 16px;
+                    right: 15px;
+                    fill: green;
+                }
+            }
+        }
+       }
+    
+       }
+    }
+        position: relative;
+        overflow: hidden;
+        .ant-form-item{
+            margin-bottom: 0;
+        }
+    .drawer-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 26px;
+        border: none;
+        padding: 0;
+        border-radius: 20px 0 0 20px;
+        background-color: #CCCCCC;
+        img{
+            position: relative;
+            top: -1px;
+        }
+
+    }
+    .linked-invoice-btn .ant-form-item{
+        position: absolute;
+        right: 0;
+    }
+    .credit_note_num{
+        .ant-form-item-control-input{
+            align-items: baseline !important;
+            .ant-form-item-control-input-content{
+                height: 18px !important;
+                display: flex;
+                align-items: flex-end;
+            }
+        }
+    }
+}

@@ -1,0 +1,233 @@
+.role_form {
+  max-width: 1180px;
+  width: 100%;
+  flex-direction: column;
+  @extend .w-100;
+  @extend .mb-30;
+  .ant-form-item-row {
+    max-width: 400px;
+  }
+  .sale_person {
+    .ant-form-item-row {
+      max-width: 1180px !important;
+    }
+    .sale_checkbox {
+      display: flex;
+      .info_circle {
+        display: flex;
+        align-items: center;
+        svg {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+  #create-role-form_sales_person {
+      width: 100%;
+      white-space: nowrap;
+      p{
+        margin-bottom: 0;
+      }
+  }
+  .role_field,
+  .role_box {
+    @extend .w-100;
+
+    .ant-form-item {
+      @extend .mb-0;
+
+      .ant-form-item-label > label {
+        color: var(--color-1616);
+      }
+    }
+  }
+
+  .role_field {
+    .ant-input {
+      height: 40px;
+    }
+  }
+  .role_field {
+    .ant-form-item-control-input {
+      min-height: auto;
+    }
+  }
+  .ant-input {
+    @extend _input_style;
+
+    &:hover {
+      background-color: var(--color-f5f5);
+    }
+
+    &:focus {
+      border-color: var(--color-0061DD);
+      box-shadow: none;
+      background: transparent;
+    }
+
+    &:disabled {
+      background-color: var(--color-eee);
+    }
+  }
+
+  _input_style {
+    border: 1px solid var(--color-e2e2e2);
+    @include borderRadius(3px);
+    outline: none;
+  }
+}
+
+.access_heading {
+  font-size: var(--font-size-b2) !important;
+  font-weight: var(--p-medium);
+  margin: 0 0 18px 0;
+  color: var(--color-1616);
+}
+
+.access_table_header {
+  background-color: var(--table-row-color);
+  padding: 10px 0 10px 0;
+
+  .header_heading {
+    font-size: var(--font-size-b5);
+    font-weight: var(--p-semi-bold);
+    line-height: var(--line-height-17);
+    color: var(--color-black);
+
+    &.left {
+      padding: 0 20px;
+    }
+  }
+
+  &.roles-bottom {
+    border-bottom: 1px solid var(--color-E5E5E5);
+    padding-block: 8px;
+
+    .header_heading {
+      &.left {
+        padding: 0 20px 0 10px;
+      }
+    }
+  }
+}
+
+$text_black: #161616;
+
+.btn_create {
+  @extend _btn;
+  color: var(--color-fff);
+  background-color: var(--color-0061DD) !important;
+
+  &:hover {
+    background-color: var(--color-007AFF) !important;
+    color: var(--color-fff) !important;
+  }
+
+  &:active {
+    background-color: var(--color-active) !important;
+  }
+}
+
+.btn_cancel {
+  @extend _btn;
+  background-color: var(--color-eee) !important;
+  color: $text_black;
+  @extend .mr-10;
+
+  &:hover {
+    background-color: var(--color-f5f5) !important;
+    color: $text_black !important;
+
+    a {
+      color: inherit;
+    }
+  }
+
+  &:active {
+    background-color: var(--color-ccc) !important;
+
+    a {
+      color: $text_black;
+    }
+  }
+
+  & > * {
+    color: inherit;
+  }
+}
+
+_btn {
+  height: 36px;
+  padding: 0 12px;
+  box-shadow: none;
+  border: none;
+  width: auto;
+  min-width: 80px;
+}
+
+.main_wrapper {
+  .__add_role_title {
+    span {
+      font-size: var(--font-size-b3);
+      line-height: var(--font-size-b1);
+      color: var(--color-black);
+    }
+  }
+  .__add_role_row {
+    padding: 3px 0;
+
+    &:nth-child(even) {
+      background-color: var(--table-row-color);
+      border-block: 1px solid var(--color-e2e2e2);
+    }
+
+    .ant-row {
+      .ant-col-offset-8 {
+        margin-inline-start: 32%;
+        .ant-col-6 {
+          text-align: center;
+
+          &:nth-child(2) {
+            padding-left: 31px !important;
+          }
+
+          &:nth-child(3) {
+            padding-left: 44px !important;
+          }
+
+          &:nth-child(4) {
+            padding-left: 56px !important;
+          }
+        }
+      }
+    }
+  }
+  .roles-bottom {
+    .ant-col {
+      &.ant-col-9 {
+        margin-inline-start: 26%;
+      }
+    }
+    .ant-col-6 {
+      text-align: center;
+    }
+  }
+}
+
+.__user_roles_header {
+  .btn-form-size {
+    padding: 0 12px;
+  }
+  h5 {
+    font-size: 16px !important;
+    line-height: 17px;
+    color: #161616;
+    font-weight: bold;
+  }
+}
+
+.remove-select-icon {
+  .ant-select-selector {
+    width: 100% !important;
+  }
+}

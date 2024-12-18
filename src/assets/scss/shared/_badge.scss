@@ -1,0 +1,125 @@
+/*================================
+    Generic Badges
+=================================*/
+@mixin badge($bgColor, $color) {
+  background-color: $bgColor;
+  color: $color !important;
+}
+
+.organization-badge {
+  display: flex;
+  align-items: center;
+  gap: 0 5px;
+}
+
+.generic-badge {
+  border-radius: 3px;
+  padding: 3px 8px;
+  font-size: 14px;
+  min-height: 24px;
+  line-height: 17px;
+  border: 0;
+  text-transform: capitalize;
+  text-align: center;
+
+  &.inventory-badge {
+    @include badge(#e8f2ff, #0061dd);
+  }
+
+  &.non-inventory-badge {
+    @include badge(#e3e2ff, #5e5bb5);
+  }
+
+  &.service-badge,
+  &.prtl-applied {
+    @include badge(#e4f3ff, #3d7199);
+  }
+
+  &.bundle-badge {
+    @include badge(#eee2ff, #6034a2);
+  }
+
+  /*===============Estimate Badges====================*/
+  &.accepted,
+  &.paid,
+  &.shipped,
+  &.received,
+  &.consumed,
+  &.debit_badge,
+  &.applied {
+    @include badge(#e8ffe5, #0e7502);
+  }
+
+  &.rejected,
+  &.not-shipped,
+  &.cancelled {
+    @include badge(#ffe4e8, #b2001e);
+  }
+
+  &.expired,
+  &.partially-paid,
+  &.onhold,
+  &.partially-applied,
+  &.issued {
+    @include badge(#ffedd5, #9d5900);
+  }
+
+  &.closed,
+  &.void,
+  &.unapplied {
+    @include badge(#f1f1f1, #666666);
+  }
+
+  &.sent,
+  &.open,
+  &.confirmed,
+  &.delivered {
+    @include badge(#def0ff, #006cbf);
+  }
+
+  &.draft {
+    @include badge(#f1e9ff, #5c00fa);
+    border: 0;
+  }
+
+  &.overdue,
+  &.credit_badge {
+    @include badge(#ffe4e8, #b2001e);
+  }
+
+  &.applied {
+    color: #0e7502;
+  }
+
+  &.prtl-applied {
+    color: #006cbf;
+  }
+
+  &.unapplied {
+    color: var(--color-extra01);
+  }
+
+  &.transparent-bg {
+    background-color: transparent;
+  }
+
+  &.pr-0 {
+    padding-right: 0;
+  }
+}
+
+.action-preference {
+  display: flex;
+  justify-content: space-between;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.partially-paid,.partially.paid{
+  min-width: 80px;
+  color: #9D5900;
+  text-transform: none;
+} 
+

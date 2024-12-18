@@ -1,0 +1,120 @@
+.image-modal-heading{
+    display: block;
+    text-align: center ;
+    margin-bottom: 30px;
+}
+.adjust_image_modal{
+    .image_adjustment{
+        padding: 0 30px 10px;
+    }   
+    .ant-modal-content{
+        padding-bottom: 0 !important;
+    }
+}
+.__item_module .btn-form-size {
+    padding: 4px 12px;
+}
+/**************************************
+   Image Adjustment Model
+***************************************/
+.image_adjustment{
+    max-width: 950px;
+    margin: 0 auto;
+
+    .image_cropper_wrapper{
+       
+        width: 100%;
+        .cropper_side,.cropped_image{
+            flex: 0 0 49.5%;
+        }
+        .cropper_side{
+            display: flex;
+            flex-direction: column;
+            .cropper_box{
+                max-width: 100%;
+                height: 350px;
+                background-color: rgba(#000000,  .3);
+                display: flex;
+                align-items: center;
+                position: relative;
+                margin-bottom: 10px;
+               .zoom-btn{
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                right: 10px;
+                background-color: var(--color-eee);
+                border-radius: 3px;
+                border: 1px solid transparent;
+                padding: 0;
+                line-height: 37px;
+                &:hover, &:active{
+                    border-color: transparent;
+                    background-color: var(--color-f5f5);
+                }
+                &.zoom-out{
+                    bottom: 50px;
+                }
+                &.zoom-in{
+                    bottom: 10px;
+                }
+               }
+               .ant-col,.ant-form-item-control-input{
+                position: unset;
+               }
+            }
+            .cropper_options{
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+                margin-bottom: 30px;
+                .ant-form-item{
+                    margin-bottom: 0;
+                }
+                .btn-form-size{
+                    display: flex;
+                    align-items: center;
+                    svg{
+                        margin-right: 5px;
+                    }
+                }
+                }
+        }
+        .cropped_image{
+            max-width: 100%;
+            width: 100%;
+            height: 350px;
+            border: 1px solid var(--color-E5E5E5);
+            background-color:  var(--color-white);
+            border-radius: 3px;
+            
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    }
+    .image_adjustment_footer{
+        display: flex;
+            justify-content: flex-end;
+        .ant-form-item{
+            margin-bottom: 10px;
+        }
+        .cancel_btn{
+            min-width: 102px !important;
+        }
+    
+    }
+}
+/**************************************
+   Quality Adjustment Model
+***************************************/
+.clear-white-space{
+    .ant-select-item-option-content{
+       white-space: normal;
+   }
+   .ant-avatar-lg{
+    flex-shrink: 0;
+   }
+}

@@ -1,0 +1,196 @@
+
+.get-perf-gap.estimate-table.generic-table{
+    .ant-table-thead{
+        
+        .ant-table-cell{
+            padding: 7px 16px 6PX 5px ;
+            line-height: 13px;
+            vertical-align: top !important;
+            &:not(:nth-child(2)){
+                vertical-align: top !important;  
+            }
+        }
+    }
+    .ant-table-tbody{
+        .ant-table-cell:not(:first-child){
+            padding: 7px 16px 6PX 5px;
+        }
+        .credit-disc{
+            margin-left: auto;
+        }
+        .qty_units{
+            color:var(--color-6e6e);
+        }
+    }
+}
+.bill_box {
+    .final_payment{
+        margin-bottom: 40px;
+    }
+}
+
+.credit-note-label{
+    color: var(--color-1616);
+    line-height: var(--line-height-18);
+    
+}
+.border-clr {
+    .asyn-paginate-custom {
+        #paginate-select {
+            .css-13cymwt-control {
+                border-color: #e2e2e2;
+                .css-1jqq78o-placeholder {
+                    color: #A8A8A8;
+                }
+            }
+        }
+    }
+}
+.billing{
+    .ant-select-selector{
+      border-color: #e2e2e2 !important;
+    }
+  }
+
+  ._txt--Stylecatcher{
+    textarea{
+        &::placeholder{
+            font-style: normal;
+        }
+    }
+  }
+  
+  .credit-disc{
+    height: 40px;
+    border: 1px solid #e2e2e2;
+    border: -radius;
+    border-radius: 4px;
+    max-width: 101px;
+    .adjustment_box {
+        border: none;
+        text-align: right;
+        padding: 0px 10px;
+        
+    }
+    .ant-select{
+        .ant-select-arrow {
+            color: #161616;
+            top: 45%;
+            right: 6px;
+        }
+        .ant-select-selector{
+            border: none;
+            background-color: #eeeeee ;
+            height: 100% ;
+            border-radius: unset;
+            width: 40px;
+            padding: 2px 4px;
+        }
+    }
+  }
+
+  .v-align{
+    vertical-align: baseline !important;
+}
+.width--req{
+    width: 57%;
+    display: inline-block;
+}
+
+.symbol_adj{
+    .ant-picker-input{
+       color: #161616;   
+       input{
+           padding-left: 0!important;
+       }
+        .ant-picker-suffix{
+            font-size: 16px;
+            padding: 0 3px;
+         }
+        .ant-picker-clear{
+            padding: 0 3px;
+            background-color: transparent;
+            top: 50%;
+            inset-inline-end: 0px;
+           
+        }
+       
+    }
+   
+}
+.product_table_empty_td {
+    white-space: unset !important;
+    .ant-avatar-lg {
+        border-radius: 3px;
+    }
+    .ant-image{
+        height: 100%;
+        .ant-image-img{
+            height: 100%;
+            object-fit: cover;
+            border: 1px solid var(--color-E5E5E5);
+            border-radius: 3px;
+        }
+    }
+    .product_text_detail{
+        line-height: 20px;
+    }
+
+}
+.generic-table.credit-note-table table{
+    margin-bottom: 20px;
+    width: 1072px;
+}
+.remaining-credits{
+    position: relative;
+    top: -4px;
+}
+.credit-label{
+    color: var(--color-1616);
+    font-weight: var(--p-medium);
+}
+.credit-note-no,
+.available-credits{
+    font-size: var(--font-size-b3);
+    color: var(--color-1616);
+    font-weight: var(--p-regular);
+    &::before{
+        content: "|";
+        display: inline-block;
+        padding-inline: 5px;
+    }
+}
+.credit-note-form{
+    .ant-drawer{
+        z-index: 999;
+    }
+    .ant-select-selector {
+    
+        .ant-select-selection-placeholder {
+          line-height: 40px !important;
+        }
+      }
+      
+}
+.button_flexbox {
+    .new_prod_btn{
+        position: relative;
+     .ant-dropdown {
+        min-width: 116px !important;
+
+        left: auto !important;
+        right: 0;
+     }
+    } 
+  }
+.credit_note_num{
+    .ant-form-item-control{
+        .ant-form-item-control-input{
+            .ant-form-item-control-input-content{
+                .ant-typography{
+                    color: var(--color-1616);
+                }
+            }
+        }
+    }
+}

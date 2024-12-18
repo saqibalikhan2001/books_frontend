@@ -1,0 +1,65 @@
+.preference_tab {
+    .ant-tabs-nav {
+        position: sticky;
+        top: 70px;
+        height: calc(100vh - 70px) !important;
+        background-color: #F6F6F6;
+        box-shadow: 1px 0 15px rgba(0, 0, 0, 0.1);
+        padding: 0 10px;
+        min-width: 198px;
+         .ant-tabs-tab {
+            border: none;
+            border-bottom: 1px solid var(--color-E5E5E5);
+            background-color: #F6F6F6;
+            padding: 8px 16px !important;
+            &.ant-tabs-tab-active{  
+                background-color: var(--color-0061DD);
+                border-radius: 0;
+                label {
+                    color: var(--color-fff) ;
+                }
+            }
+        }
+
+    }
+
+    .ant-tabs-content-holder {
+        border-left: none !important;
+
+        .ant-tabs-tabpane {
+            padding-left: 0 !important;
+        }
+    }
+
+    .ant-tabs-tab-btn label {
+        cursor: pointer !important;
+        color: var(--color-1616);
+    }
+}
+
+.invoice-form-container {
+    .ant-input-textarea {
+        .ant-input {
+          
+            border: 1px solid var(--color-e2e2e2);
+            &:focus{
+                border-color: var(--color-0061DD) !important;
+            }
+        }
+    }
+}
+.min_estimate_expire,
+.max_estimate_expire{
+    min-height: 62px;
+    margin-bottom: 12px;
+    .estimates-field{
+        min-width: 105px;
+        .ant-form-item-explain-error{
+            width: 100% !important;
+            white-space: nowrap;
+        }
+    }
+}
+.dropdown-width {
+    width: 105px;
+}
