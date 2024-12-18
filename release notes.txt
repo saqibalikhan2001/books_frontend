@@ -1,0 +1,9 @@
+03/07/2024
+
+Add following variables to .env file 
+
+VITE_CUSTOMER_PLACEHOLDER_IMAGE=/static/media/customer-details-large.svg
+VITE_CUSTOMER_PLACEHOLDER_SMALL_IMAGE=/static/media/customer-details-small.svg
+VITE_ITEM_PLACEHOLDER_IMAGE=/static/media/default-item.svg
+VITE_ITEM_PLACEHOLDER_SMALL_IMAGE=/static/media/Item-details-small.svg
+VITE_ORGANIZATION_PLACEHOLDER_IMAGE=/static/media/default-organization.svg
