@@ -1,0 +1,1 @@
+import{r as o}from"./index-4b3d7bc8.js";import{u}from"./useSearchParam-ebfda256.js";const p=r=>{const{param:t,setSearchParams:e}=u("tab",r),[s,n]=o.useState(t);return{current:s,handleChange:a=>{n(a),e({tab:a})}}};export{p as u};
