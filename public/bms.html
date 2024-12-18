@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 11:00:00 GMT" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate, max-age=0" />
+    <meta http-equiv="Expires" content="0" />
+    <script src="jquery.min.js"></script>
+    <script src="jquery.cookie.js"></script>
+  </head>
+
+  <body>
+    <div>Books Iframe Url</div>
+    <script>
+      let url = window.location.href;
+      let origins = "";
+      let Api_Url = "";
+      let cookie_domain = "";
+
+      if (url.includes("com")) {
+        origins = [
+          "https://accounts.seebiz.com",
+          "https://www.accounts.seebiz.com",
+          "https://accounts.seebiz.com/",
+          "https://www.accounts.seebiz.com/",
+        ];
+        Api_Url = "https://books.api.seebiz.com/api/v1";
+        cookie_domain = ".seebiz.com";
+      } else if (url.includes("cloud")) {
+        origins = [
+          "https://accounts.seebiz.cloud",
+          "https://www.accounts.seebiz.cloud",
+          "https://accounts.seebiz.cloud/",
+          "https://www.accounts.seebiz.cloud/",
+          "https://accounts5.seebiz.cloud",
+          "https://www.accounts5.seebiz.cloud",
+        ];
+        Api_Url = "https://booksapi.seebiz.cloud/api/v1";
+        cookie_domain = ".seebiz.cloud";
+      } else if (window.location.hostname === "localhost") {
+        origins = ["http://localhost:3010"];
+        Api_Url = "http://localhost:8000/api/v1";
+        cookie_domain = "";
+      }
+      const s3BucketUrl = "https://seebiz-development.s3.amazonaws.com";
+      const cookie_path = "/";
+      window.addEventListener("message", async ({ origin, data }) => {
+        // console.log("in event listener", data, origin);
+        // console.log(origins?.includes(origin), typeof data === "string");
+        if (origins?.includes(origin) && typeof data === "string") {
+          // console.log("i m here");
+          const [token, userAction] = data.split(":#:");
+          // if (userAction === "login") {
+          //   console.log("in login", validateUser(), validToken());
+
+          //   const invitation_token = $.cookie("invitation_token");
+          //   console.log({ invitation_token })
+          //   if (!validToken() && !validateUser()) {
+          //     fetch(`${Api_Url}/info`, {
+          //       method: "POST",
+          //       headers: {
+          //         "Content-Type": "application/json",
+          //       },
+          //       body: JSON.stringify({
+          //         st: token,
+          //         location: "event_listener",
+          //         invitation_token: invitation_token ? invitation_token : "",
+          //       }),
+          //     })
+          //       .then((response) => {
+          //         if (!response.ok) {
+          //           return Promise.reject(response);
+          //         }
+          //         return response.json();
+          //       })
+          //       .then((data) => {
+          //         console.log("data------", data);
+          //         $.removeCookie("invitation_token", { path: cookie_path });
+          //         const email = data.email;
+          //         const name = data.name;
+          //         const image = data.image;
+          //         const img = `${s3BucketUrl}/${image}`;
+          //         const SSO = { email, name, img };
+          //         console.log("blog ims ====================> ", JSON.stringify(SSO));
+          //         localStorage.setItem("wordpress", JSON.stringify(SSO));
+          //         let date = new Date();
+          //         let days = 120;
+          //         date.setTime(+date + days * 86400 * 1000);
+          //         $.cookie("token", data.access_token, {
+          //           path: cookie_path,
+          //           domain: cookie_domain,
+          //           expires: date,
+          //         });
+          //         $.cookie("refreshToken", data.refresh_token, {
+          //           path: cookie_path,
+          //           domain: cookie_domain,
+          //         });
+          //         $.cookie("rememberMe", data.refresh_token, {
+          //           path: cookie_path,
+          //           domain: cookie_domain,
+          //         });
+          //       })
+          //       .catch((error) => {
+          //         console.log("error in login ----> ", error);
+          //         if (typeof error.json === "function") {
+          //           error
+          //             .json()
+          //             .then((jsonError) => {
+          //               console.log("Json error from API");
+          //               console.log(jsonError.message);
+          //               console.log(jsonError.data);
+          //               const email = jsonError.data[0];
+          //               const name = jsonError.data[1];
+          //               const image = jsonError.data[2];
+          //               const img = `${s3BucketUrl}/${image}`;
+          //               const SSO = { email, name, img };
+          //               console.log("blog ims ====================> ", JSON.stringify(SSO));
+          //               localStorage.setItem("wordpress", JSON.stringify(SSO));
+          //               $.cookie("user_status", "in_active", {
+          //                 path: cookie_path,
+          //                 domain: cookie_domain,
+          //               });
+          //             })
+          //             .catch((genericError) => {
+          //               console.log("Generic error from API");
+          //               console.log(error.statusText);
+          //             });
+          //         } else {
+          //           //console.log("Fetch error");
+          //           console.log(error);
+          //         }
+          //       });
+          //   }
+          // }
+
+          if (userAction === "login") {
+            if (!validToken()) {
+              const sso_check = JSON.parse(localStorage.getItem("sso_check"));
+              // console.log("books SSO login --->", sso_check);
+
+              if (sso_check === null) {
+                localStorage.setItem("sso_check", "false");
+                //console.log('after set sso_check in local storage')
+              }
+            }
+          }
+          if (userAction === "logout") {
+            // console.log("books SSO logout");
+            localStorage.setItem("sso_check", "false");
+            localStorage.clear();
+            sessionStorage.clear();
+            $.removeCookie("user_status", { path: cookie_path });
+            $.removeCookie("invitation_token", { path: cookie_path });
+            $.removeCookie("token", { path: cookie_path });
+            $.removeCookie("refreshToken", { path: cookie_path });
+            $.removeCookie("rememberMe", { path: cookie_path });
+            $.removeCookie("logout_token", { path: cookie_path });
+          }
+          //   if (userAction === "logout") {
+          //   let token = $.cookie("token");
+          //   //let token = $.cookie('logout_token');
+          //     localStorage.setItem("sso_check", "false");
+
+          //     console.log("in logout clear cookies in before remove");
+          //   //console.log("in logout clear cookies in ims", token);
+          //   $.removeCookie("user_status", { path: cookie_path });
+          //     $.removeCookie("invitation_token", { path: cookie_path });
+          //   $.removeCookie("token", { path: cookie_path });
+          //   $.removeCookie("refreshToken", { path: cookie_path });
+          //   $.removeCookie("rememberMe", { path: cookie_path });
+          //   $.removeCookie("logout_token", { path: cookie_path });
+          //     console.log("in logout clear cookies in bms after remove");
+
+          //   document.cookie =
+          //     "user_status=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=" +
+          //     cookie_path +
+          //     ";domain=" +
+          //     cookie_domain +
+          //     ";";
+          //   document.cookie =
+          //     "token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=" +
+          //     cookie_path +
+          //     ";domain=" +
+          //     cookie_domain +
+          //     ";";
+          //   document.cookie =
+          //     "refreshToken=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=" +
+          //     cookie_path +
+          //     ";domain=" +
+          //     cookie_domain +
+          //     ";";
+          //   document.cookie =
+          //     "rememberMe=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=" +
+          //     cookie_path +
+          //     ";domain=" +
+          //     cookie_domain +
+          //     ";";
+          //   document.cookie =
+          //     "logout_token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=" +
+          //     cookie_path +
+          //     ";domain=" +
+          //     cookie_domain +
+          //     ";";
+          //     console.log("in logout clear cookies in bms after 205");
+
+          //   localStorage.clear();
+          //   sessionStorage.clear();
+          //     console.log("in logout clear cookies in bms after 209");
+
+          //   localStorage.setItem("logout-event", "logout" + Math.random());
+          //     console.log('before logout url', token)
+          //     if (typeof token !== "undefined" && token) {
+          //       console.log('i m here in logout call');
+          //       await fetch(`${Api_Url}/auth/sso_logout`, {
+          //         method: "POST",
+          //         headers: {
+          //           "Content-Type": "application/json",
+          //           authorization: token,
+          //         },
+          //       })
+          //         .then((response) => {
+          //           if (!response.ok) {
+          //             return Promise.reject(response);
+          //           }
+          //           return response.json();
+          //         })
+          //         .then((data) => {
+          //           //console.log("in logout success response");
+          //         })
+          //         .catch((error) => {
+          //           console.log("error in logout ----> ", error);
+          //           if (typeof error.json === "function") {
+          //             error
+          //               .json()
+          //               .then((jsonError) => {
+          //                 console.log(
+          //                   "Json error from logout API",
+          //                   jsonError.message,
+          //                   jsonError.data
+          //                 );
+          //               })
+          //               .catch((genericError) => {
+          //                 console.log("Generic error from logout API", error.statusText);
+          //               });
+          //           } else {
+          //             //console.log("Fetch error");
+          //             console.log(JSON.stringify(error));
+          //           }
+          //         });
+          //     }
+          // }
+        }
+      });
+
+      function validToken() {
+        const token = $.cookie("token");
+        if (token) return token;
+        return false;
+      }
+
+      function validateUser() {
+        const user_status = $.cookie("user_status");
+        //console.log('valid user ----- ', user_status)
+        if (user_status) return user_status;
+        return false;
+      }
+    </script>
+  </body>
+</html>
