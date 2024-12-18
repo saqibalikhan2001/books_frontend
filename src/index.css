@@ -1,0 +1,116 @@
+/** @format */
+@import "assets/css/global.css";
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
+    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  height: 100%;
+
+}
+
+/* underline hover style */
+.hover-underline {
+  display: inline-block;
+  position: relative;
+  color: #0087ca;
+}
+
+.hover-underline:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  /* right: 0; */
+  background-color: #0087ca;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.logo {
+  height: 32px;
+  margin: 16px;
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.uiux_sidebar {
+  margin-top: 52px;
+}
+
+.flex_root {
+  display: flow-root;
+}
+
+.login-form-section {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* .ant-drawer-open, */
+/* .ant-drawer-mask, */
+.ant-drawer-content-wrapper {
+  top: 55px;
+}
+
+/* organization step form style */
+/* .steps-content {
+  margin-top: 20px;
+  padding: 20px 30px;
+  text-align: left;
+  background-color: white;
+  border: 1px dashed #e9e9e9;
+  border-radius: 5px;
+} */
+
+.steps-action {
+  margin-top: 24px;
+  display: flex;
+  justify-content: flex-end;
+}
+[data-theme="dark"] .steps-content {
+  /* margin-top: 16px; */
+  border: 1px dashed #303030;
+  background-color: white;
+  /* rgba(255, 255, 255, 0.04); */
+  color: rgba(255, 255, 255, 0.65);
+  /* padding-top: 80px; */
+}
+
+.mb {
+  margin-bottom: 0px;
+}
+
+.layout-display {
+  height: 100vh !important;
+  /* min-height: 100vh !important; */
+  justify-content: center;
+}
+
+.main-content {
+  padding-top: 55px;
+  min-height: 100vh;
+  background: #f5f5f5;
+  /* margin: 0 16px; */
+}
+
+.footer {
+  text-align: center;
+  padding: 0 !important;
+}
+
+.px-30 {
+  padding: 0 30px !important;
+}
