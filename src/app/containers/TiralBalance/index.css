@@ -1,0 +1,18 @@
+th{
+  text-align: left;
+}
+td {
+  vertical-align:top
+}
+table {
+  width: 100%;
+  position: relative;
+}
+
+.before-div:before {
+  content: "";
+  border: 1px solid #ccc;
+  left: 0;
+  right: 0;
+  position: absolute;
+}
