@@ -1,0 +1,386 @@
+.dashboard--charts {
+  margin: 10px;
+
+  .card-layout {
+    border: none;
+    border-radius: 5px;
+    &.h-318 {
+      height: 318px;
+      .ant-card-body {
+        height: 100%;
+      }
+      .h-100-60 {
+        height: calc(100% - 60px);
+        .ant-carousel,
+        .slick-slider,
+        .slick-list,
+        .slick-track,
+        .slick-slide {
+          height: 100%;
+        }
+        .slick-slide > div {
+          height: 100%;
+        }
+      }
+    }
+    .ant-card-body {
+      padding: 0;
+      .stateHeader {
+        padding: 9px 10px 9px 15px;
+
+        border-bottom: 1px solid #e5e5e5;
+        .ant-picker-range {
+          height: 40px;
+        }
+        .ant-page-header-heading-extra {
+          margin: 0;
+        }
+        .ant-page-header-heading-left {
+          .ant-page-header-heading-title {
+            font-family: "IBM Plex Sans";
+            font-weight: var(--p-bold);
+            font-size: 16px;
+            line-height: 17px;
+            text-align: left;
+            color: #161616;
+            span {
+              font-size: 14px;
+              font-weight: normal;
+            }
+          }
+
+          margin: 0;
+        }
+        .ant-form-item {
+          margin-bottom: 0;
+          min-width: 140px;
+        }
+      }
+    }
+  }
+}
+
+/*=========================
+        estimate section 
+    ==========================*/
+
+.estimateSec {
+  padding: 20px;
+  min-height: 214px;
+  .dashboard-invoice-sec {
+    border-left: 1px solid #e5e5e5;
+    padding-left: 30px;
+    .dashboard-invoice-top {
+      text-align: center;
+      margin-bottom: 20px;
+      h4 {
+        font-family: "IBM Plex Sans";
+        font-weight: bold;
+        font-size: 14px !important;
+        line-height: 17px;
+        text-align: center;
+        color: #161616;
+        margin-bottom: 0;
+      }
+    }
+    > .d-flex {
+      flex-direction: column;
+      width: 100%;
+      justify-content: center;
+    }
+    .textStyle span:first-child {
+      font-family: "IBM Plex Sans";
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 17px;
+      text-align: left;
+      color: #161616;
+    }
+  }
+}
+
+/*=========================
+        purchase section 
+    ==========================*/
+.dash-purchase-info {
+  padding: 26px 30px 27px 30px;
+  .border-container {
+    border-bottom: 1px solid #e5e5e5;
+    margin-bottom: 10px;
+  }
+  .purch-info-row {
+    margin-bottom: 10px;
+    span {
+      font-family: "IBM Plex Sans";
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 20px;
+      color: #161616;
+      &:first-child {
+        font-weight: 600;
+      }
+    }
+  }
+  .purchase-progress {
+    height: 100%;
+    flex-direction: column;
+    padding-left: 53px;
+    h5 {
+      font-family: "IBM Plex Sans";
+      font-weight: 600;
+      font-size: 13px;
+      line-height: 17px;
+      text-align: center;
+      color: #161616;
+      flex-shrink: 0;
+    }
+    .active-item-bar {
+      h5 {
+        margin-bottom: 0;
+      }
+      .ant-progress {
+        margin-bottom: 0;
+        margin-left: 8px;
+        .ant-progress-bg {
+          background-color: #118e03;
+        }
+      }
+    }
+  }
+}
+
+/*=========================
+        progress section 
+    ==========================*/
+.rec-pay-progress-sec {
+  padding: 20px 10px 22px;
+  min-height: 274px;
+  .progress-sec {
+    max-width: 122px;
+    flex-direction: column;
+    margin: 0 auto;
+    .ant-typography {
+      font-family: "IBM Plex Sans";
+      font-weight: 600;
+      font-size: 13px !important;
+      line-height: 17px;
+      text-align: left;
+      color: #161616;
+      // margin-bottom: 0;
+    }
+    .ant-progress {
+      margin-left: 0 !important;
+      margin-top: 8px;
+      margin-bottom: 8px;
+      .ant-progress-text {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        text-align: center;
+        color: #161616;
+      }
+    }
+  }
+  .rec-progress-bar-sec {
+    max-width: 170px;
+    margin: 0 auto;
+    .ant-progress {
+      margin: 0;
+
+      .ant-progress-inner {
+        height: 6px;
+      }
+      .ant-progress-text {
+        font-weight: 600;
+        font-size: 12px;
+      }
+    }
+  }
+}
+
+/*====================================
+      Order Summary
+    =====================================*/
+%common_style {
+  line-height: var(--line-height-17);
+  color: var(--color-1616);
+}
+.dashboard-heading-sm {
+  font-weight: var(--p-bold);
+  font-size: var(--font-size-b2);
+}
+.mini-heading {
+  font-weight: var(--p-semi-bold);
+  font-size: var(--font-size-b5) !important;
+  line-height: var(--line-height-17);
+  color: var(--color-1616);
+}
+.card-row {
+  display: flex;
+  .card-chart-view {
+    flex: 0 0 80%;
+    padding: 15px 20px;
+  }
+  .card-total-status {
+    padding-top: 20px;
+    flex: 0 0 16%;
+    padding-inline: 10px;
+    .so_sum_data {
+      margin-bottom: 20px;
+      h4.ant-typography,
+      h4 {
+        font-weight: normal;
+        font-size: var(--font-size-b3) !important;
+        margin-bottom: 5px;
+        @extend %common_style;
+      }
+
+      h3.ant-typography {
+        font-weight: var(--p-bold);
+        font-size: var(--font-size-b2);
+        margin: 0;
+        @extend %common_style;
+      }
+    }
+  }
+}
+.number-value {
+  @extend .mini-heading;
+  font-weight: var(--p-regular);
+}
+/*====================================
+      Top Selling Items
+    =====================================*/
+.salesOrderHead {
+  .stateHeader {
+    .ant-page-header-heading-extra {
+      opacity: 0;
+    }
+  }
+}
+.pos-relative {
+  position: relative;
+}
+.ant-carousel .slick-dots {
+  display: none !important;
+}
+.carousel-wrapper {
+  display: flex;
+  padding: 20px 40px;
+}
+.carousel-image {
+  margin-right: 20px;
+  .ant-image {
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--color-E5E5E5);
+    border-radius: 3px;
+    overflow: hidden;
+    .ant-image-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  &.circle-image {
+    .ant-image {
+      border-radius: 50%;
+      border-color: transparent;
+    }
+  }
+}
+.carousel-content {
+  flex: 1;
+}
+h3.carousel-item-title {
+  font-weight: var(--p-semi-bold);
+  font-size: var(--font-size-b3);
+  line-height: var(--line-height-19);
+  color: var(--color-1616);
+  word-break: break-word;
+  margin-bottom: 0;
+}
+h5.carousel-heading,
+h5.carousel-value {
+  margin-top: 0 !important;
+  margin-bottom: 0;
+}
+h5.carousel-heading {
+  min-width: 100px;
+  @extend .mini-heading;
+}
+h5.carousel-value {
+  @extend .mini-heading;
+  font-weight: var(--p-regular);
+}
+.carousel-arrow-prev,
+.carousel-arrow-next {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  svg {
+    transform: scale(1.45);
+    filter: brightness(0) saturate(100%) invert(0%) sepia(8%) saturate(1692%) hue-rotate(330deg)
+      brightness(95%) contrast(83%);
+  }
+}
+.carousel-arrow-prev {
+  left: 15px;
+}
+.carousel-arrow-next {
+  right: 0;
+}
+
+/*====================================
+       Selling tabs
+    =====================================*/
+.sales-tabs {
+  .ant-tabs-nav {
+    margin-bottom: 13px;
+    &:before {
+      border-color: #e5e5e5;
+    }
+    .ant-tabs-tab {
+      padding: 14px 15px 8px;
+    }
+  }
+  .ant-tabs-content-holder {
+    min-height: 530px;
+  }
+  .dashboard-table {
+    // .ant-table-content{
+    //   overflow-x: auto;
+    //   table{
+    //     margin-bottom: 0;
+    //     width: 1103px;
+    //   }
+    // }
+    .ant-table-tbody > tr > td {
+      padding: 13px 15px !important;
+    }
+    .ant-table-thead tr > th {
+      padding-left: 15px !important;
+      padding-right: 15px !important;
+    }
+  }
+}
+.est-summary-graph {
+  .recharts-wrapper {
+    max-height: 230px !important;
+  }
+}
+
+@media (max-width: 1366px) {
+  .sales-tabs {
+    .dashboard-table {
+      .ant-table-content {
+        overflow-x: auto;
+        table {
+          margin-bottom: 0;
+          width: 1103px;
+        }
+      }
+    }
+  }
+}
