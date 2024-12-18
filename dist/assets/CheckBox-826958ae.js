@@ -1,0 +1,1 @@
+import{j as e,F as c,C as n}from"./index-4b3d7bc8.js";const h=({name:r="",noStyle:o=!0,label:s="",disabled:a=!1,handleClick:t})=>e.jsx(c.Item,{name:r,valuePropName:"checked",noStyle:o,children:e.jsx(n,{disabled:a,onChange:t,children:s})});export{h as default};
